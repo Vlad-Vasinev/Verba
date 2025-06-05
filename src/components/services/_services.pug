@@ -1,0 +1,104 @@
+.page__container
+  .main 
+    .reviews-mobile 
+      .main__reviews
+        .stories-block_reviews(js-stories-img-slider)
+          .main__mobile
+            - var i = 0;
+            while i < 5
+              .stories-item.swiper-slide(data-video-src='img/waffle.mp4', data-preview-src='img/reviewPrev1.png')
+                .stories-item__play
+                  <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.99979 0.631403L18.9156 9.81779C20.2492 10.5875 20.2492 12.5124 18.9156 13.2821L2.99979 22.4685C1.66646 23.2381 0 22.2758 0 20.7363V2.36358C0 0.824085 1.66645 -0.138181 2.99979 0.631403Z" fill="white"/>
+                  </svg>
+                .stories-item-preview
+                  img(src='img/reviews1.png')
+                .stories-item-desc
+                  h5 Amosova Rose
+              - i++
+  .page__block
+    .page__heading  
+      h1 Our services
+  .page__block
+    .video-blocks.service-block(js-video-slider)
+      .main__video.service-page
+        a.main__video-el.el-first(href="#")
+          .main__video-name 
+            |Pregnancy Management
+          <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-1.jpg">
+            <source src="img/video/preview-3.mp4" type="video/mp4">
+            <source src="img/video/video-1.webm" type="video/webm">
+          </video>
+          .main__video-price 
+            |от 48 000 ₽
+        a.main__video-el.el-second(href="#")
+          .main__video-name 
+            |Pregnancy Management
+          <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-2.jpg">
+            <source src="img/video/preview-1.mp4" type="video/mp4">
+            <source src="img/video/video-1.webm" type="video/webm">
+          </video>
+          .main__video-price 
+            |от 48 000 ₽
+        a.main__video-el.el-third(href="#")
+          .main__video-name 
+            |Pregnancy Management
+          <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-3.jpg">
+            <source src="img/video/preview-4.mp4" type="video/mp4">
+            <source src="img/video/video-1.webm" type="video/webm">
+          </video>
+          .main__video-price 
+            |от 48 000 ₽
+        a.main__video-el.el-fourth(href="#")
+          .main__video-name 
+            |Pregnancy Management
+          <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-4.jpg">
+            <source src="img/video/preview-2.mp4" type="video/mp4">
+            <source src="img/video/video-1.webm" type="video/webm">
+          </video>
+          .main__video-price 
+            |от 48 000 ₽
+        a.main__video-el.el-first(href="#")
+          .main__video-name 
+            |Pregnancy Management
+          <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-4.jpg">
+            <source src="img/video/preview-3.mp4" type="video/mp4">
+            <source src="img/video/video-3.webm" type="video/webm">
+          </video>
+          .main__video-price 
+            |от 48 000 ₽
+        a.main__video-el.el-second(href="#")
+          .main__video-name 
+            |Pregnancy Management
+          <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-4.jpg">
+            <source src="img/video/preview-3.mp4" type="video/mp4">
+            <source src="img/video/video-3.webm" type="video/webm">
+          </video>
+          .main__video-price 
+            |от 48 000 ₽
+        a.main__video-el.el-third(href="#")
+          .main__video-name 
+            |Pregnancy Management
+          <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-4.jpg">
+            <source src="img/video/preview-3.mp4" type="video/mp4">
+            <source src="img/video/video-3.webm" type="video/webm">
+          </video>
+          .main__video-price 
+            |от 48 000 ₽
+        a.main__video-el.el-fourth(href="#")
+          .main__video-name 
+            |Pregnancy Management
+          <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-4.jpg">
+            <source src="img/video/preview-3.mp4" type="video/mp4">
+            <source src="img/video/video-3.webm" type="video/webm">
+          </video>
+          .main__video-price 
+            |от 48 000 ₽
+        a.main__video-el(href="#")
+          span
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L14 17.5M19 12L14 6.5" stroke="#BE48B4" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            p All services
+      .navigation-fraction
+        .navigation-fraction__pagination

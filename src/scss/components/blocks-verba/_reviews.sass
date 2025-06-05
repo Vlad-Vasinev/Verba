@@ -1,0 +1,22 @@
+.stories-block_reviews
+  @extend .stories-block
+  overflow: visible !important
+  
+.stories-block_reviews
+  .stories-item
+    .stories-item-desc
+      position: absolute
+      +aPadd(12, 24)
+      background-color: #fff
+      width: max-content !important
+      z-index: 10
+      +aProp(border-radius, 12)
+      +aProp(top, 16)
+      +aProp(left, 16)
+      margin-top: 0 !important
+      +r($sm)
+        padding: 12px 24px
+        border-radius: 12px
+        top: 16px
+        left: 16px
+         

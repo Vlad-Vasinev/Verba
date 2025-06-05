@@ -1,0 +1,17 @@
+<svg width="920" height="500" viewBox="0 0 920 500" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_4292_4818" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="920" height="500">
+<rect width="920" height="500" rx="40" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_4292_4818)">
+<rect x="-322" y="-222" width="1544" height="883" fill="url(#pattern0)"/>
+<rect x="-170" width="1090" height="523" fill="url(#pattern1)"/>
+<rect opacity="0.6" width="920" height="500" fill="#2B0638"/>
+</g>
+<path d="M180.5 187.812C167.866 187.812 157.625 198.054 157.625 210.688C157.625 217.002 160.184 222.72 164.322 226.859C168.461 231.001 178.213 236.994 178.784 243.284C178.87 244.228 179.553 245 180.5 245C181.447 245 182.13 244.228 182.216 243.284C182.787 236.994 192.539 231.001 196.678 226.859C200.816 222.72 203.375 217.002 203.375 210.688C203.375 198.054 193.134 187.812 180.5 187.812Z" fill="white"/>
+<path d="M180.5 218.694C184.922 218.694 188.506 215.11 188.506 210.688C188.506 206.266 184.922 202.682 180.5 202.682C176.078 202.682 172.494 206.266 172.494 210.688C172.494 215.11 176.078 218.694 180.5 218.694Z" fill="#806985"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_4292_4818" transform="scale(0.000323834 0.000566251)"/>
+</pattern>
+</defs>
+</svg>

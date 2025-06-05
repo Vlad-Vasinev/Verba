@@ -1,0 +1,260 @@
+.modal-background
+  width: 100%
+  top: 0
+  left: 0
+  height: 100%
+  position: fixed
+  z-index: 192
+  // z-index: map-get($zindex, overlay)
+  display: block
+
+  background: #080808
+
+  opacity: 0
+  visibility: hidden
+  transition: opacity 0.3s, visibility 0s 0.31s
+
+// .modal-background_active 
+//   z-index: 190
+
+.modal.opened ~ .modal-background, .modal-background.opened
+  visibility: visible
+  opacity: 0.6
+  transition: opacity 0.3s, visibility 0s 0s
+
+[js-modal-open]
+  cursor: pointer
+
+// .modal
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5,
+//   h6,
+//   a,
+//   p,
+//   div,
+//   span
+//     color: #000
+
+.modal
+  // width: fit-content
+  display: none
+  top: 0
+
+  height: auto
+  +aProp(width, 1118)
+  top: 45%
+  position: fixed
+  z-index: map-get($zindex, modal)
+  opacity: 0
+  visibility: hidden
+  max-height: 95%
+  left: 50vw
+
+  transform: translate(-50%, -40%)
+  transition: opacity 0.2s, visibility 0s 0.41s, transform 0.4s
+  +r($sm)
+    width: 100%
+    top: 0
+    min-height: 100vh
+    min-height: -webkit-fill-available
+    height: 100vh
+    max-height: 100vh
+    opacity: 1
+    transform: translate(-50%, 100%)
+    transition: visibility 0s 0.41s, transform 0.4s
+
+  &.opened
+    opacity: 1
+    visibility: visible
+    transition: transform 0.4s, visibility 0s 0s, opacity 0.2s
+    transform: translate(-50%, -50%)
+    +r($sm)
+
+      transform: translate(-50%, 0)
+  &._inited
+    display: block
+  .modal__close-button
+    cursor: pointer
+    &:active
+      transform: scale(0.96)
+  .modal__body
+    width: 100%
+    position: relative
+
+    +r($sm)
+      height: 100%
+      overflow-y: scroll
+      overflow-x: hidden
+      +hideScroll
+      padding-bottom: 118px
+
+  .modal__inner
+    +aProp(border-radius, 24)
+    height: auto
+    width: 100%
+    position: relative
+    background-color: #fff
+    +aPadd(50, 60, 60, 60)
+    color: #000
+    +r($sm)
+      height: 100%
+      border-radius: 24px
+      padding: 15px
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+  .modal__top
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +aProp(margin-bottom, 40)
+    +r($sm)
+      margin-bottom: 24px
+    span
+      @extend .h2
+      color: #000
+    svg
+      display: block
+      +aProp(width, 57)
+      height: auto
+      +r($sm)
+        width: 44px
+
+.modal[data-modal-name="video-banner"]
+  +rmin($sm1)
+    width: 80vw
+     
+  .modal__inner
+    background: transparent
+    padding: 0
+    .modal__top
+      justify-content: end
+      +r($sm)
+        margin: 0
+        padding: 15px 15px 0 0
+      span
+        display: none
+    .modal__body
+      padding: 0 57px
+      // background-color: #202020
+      background-image: url(../img/loadingIcon.svg)
+      background-repeat: no-repeat
+      background-size: 10%
+      background-position: center
+      +r($sm)
+        background-size: 25%
+         
+      +r($sm)
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 0
+      iframe
+        // visibility: hidden
+        display: block
+        width: 100%
+        height: auto
+        aspect-ratio: 16/9
+        
+.modal[data-modal-name="mini-gallery"]
+  width: 100vw
+  max-height: 100%
+  top: 0
+  transform: none
+  left: 0
+  +r($sm)
+    display: none
+  .modal__inner
+    border-radius: 0
+    padding: 0
+    height: 100vh
+  .modal__top
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    right: unset
+    padding: aCalc(40) aCalc(40) 0 0
+  .modal__body
+    padding: aCalc(100) aCalc(500)
+    max-height: 100%
+    overflow-y: scroll
+
+.modal[data-modal-name="appoint-form"]
+  
+  +rmin($sm1)
+    +aProp(width, 520)
+  +r($sm)
+    top: unset
+    bottom: 0
+    min-height: max-content
+    height: auto
+  .modal__inner
+    +rmin($sm1)
+      padding: aCalc(40)
+    +r($sm)
+      height: auto
+      &:before
+        content: ''
+        position: absolute
+        z-index: 1
+        width: 50px
+        height: 2px
+        border-radius: 2px
+        top: 8px
+        left: calc( 50% - 25px )
+        background-color: #E0E0E0
+  .modal__top
+    
+  .modal__body
+    padding: 0
+    +aProp(padding-bottom, 24)
+    +r($sm)
+      padding-bottom: 24px
+    .ui-input 
+      +aProp(margin-bottom, 32)
+      +r($sm)
+        margin-bottom: 32px
+    button
+      width: 100%
+      +aProp(margin-top, 16)
+      +r($sm)
+        margin-top: 16px
+    .form-policy
+      +aProp(margin-top, 24)
+      +r($sm)
+        margin-top: 24px
+
+.form-request.loading 
+  
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    background-repeat: no-repeat
+    background-size: 25%
+    background-color: #fff9
+    top: 0
+    z-index: 1
+    background-position: center 30%
+    background-image: url(../img/loadingIcon.svg)
+.form-response
+  width: 100%
+  text-align: left
+  +aProp(font-size, 24)
+  +aProp(line-height, 32)
+  color: #000
+  display: none
+  +r($sm)
+    font-size: 24px
+    line-height: 32px
+
+.form-response, .form-request
+  &.hidden
+    display: none
+  &.visible
+    display: block

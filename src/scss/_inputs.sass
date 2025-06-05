@@ -1,0 +1,273 @@
+// /* UI */
+
+// // input
+
+// input, textarea
+//   font-family: $baseFont
+//   border-radius: 0
+
+// .grecaptcha-badge
+//   display: none !important
+
+// .ui-input, .ui-input-select
+//   position: relative
+//   height: 64px
+//   &.ui-textarea
+//     height: 112px
+//   &__float-label
+//     position: absolute
+//     left: 20px
+//     top: 20px
+//     font-size: 16px
+//     font-weight: 500
+//     line-height: 24px
+//     color: #828282
+//     transition: 0.25s ease
+//     span.required
+//       color: #f45b63
+//   &__search-icon
+//     position: absolute
+//     background: transparent
+//     top: 17px
+//     right: 17px
+//     svg
+//       size: 22px
+//       fill: #247eca
+//   &__sub-icon
+//     position: absolute
+//     background: #247eca
+//     top: 0
+//     right: 0
+//     width: 56px
+//     height: 100%
+//     border-top-right-radius: 12px
+//     border-bottom-right-radius: 12px
+//     svg
+//       size: 22px
+//       fill: #fff
+//   input, textarea
+//     -webkit-appearance: none
+//     display: block
+//     width: 100%
+//     height: 100%
+//     background: #fff
+//     border: none
+//     //border-radius: 6px
+//     box-shadow: none
+//     color: currentColor
+//     font-family: $baseFont
+//     font-size: 16px
+//     padding: 20px 0
+//     border-bottom: 1px solid #e5e5e5
+
+//     &::placeholder
+//       color: currentColor
+//     &.has-error
+//       border-bottom: 1px solid #fd566b
+//     &.is-valid
+//       //border-color: #5ad321
+//   .error
+//     font-weight: 500
+//     font-size: 13px
+//     line-height: 18px
+//     color: #fd566b
+
+//   &.is-focused
+//     input
+//       padding: 24px 0 12px 20px
+//     textarea
+//       padding: 24px 0 12px 20px
+//     .ui-input__float-label
+//       top: 8px
+//       font-size: 11px
+//       opacity: 0.5
+
+// .inputs-container-inline
+//   display: flex
+//   flex-wrap: nowrap
+//   gap: 17px
+//   .ui-input
+//     flex: 0 3 auto
+// a.orange-button
+//   display: flex
+
+// .fill-button
+
+// .btn-hollow
+//   position: relative
+//   overflow: hidden
+//   cursor: pointer
+//   transform: scale(1)
+//   transition: border-color .3s ease, background .3s ease, transform .12s ease-out
+//   &:hover
+//     border-color: #247eca
+//     background: #247eca
+//     color: #fff
+//     transition: border-color 1s ease, background 1s ease, color .3s ease
+//   &:active
+//     transform: scale(.97)
+//     transition: transform .12s ease-out
+//   &:before
+//     left: 50%
+//     top: 50%
+//     right: auto
+//     bottom: auto
+//     background: #247eca
+//     width: 100%
+//     padding-top: 100%
+//     transform: scale(0) translate(-50%,-50%)
+//     transform-origin: var(--x) var(--y)
+//   &:before
+//     content: ""
+//     position: absolute
+//     border-radius: 200px
+//     pointer-events: none
+//     transition-property: transform,background-color,border-color,box-shadow
+//     transition-duration: .4s,.8s,.8s,.8s
+//     z-index: -1
+//   &:hover
+//     border-color: #247eca
+//     background: #247eca
+//     color: #fff
+//     transition: border-color 1s ease, background 1s ease, color .3s ease
+//   &:active
+//     transform: scale(.97)
+//     transition: transform .12s ease-out
+//   &.hovered
+//     &:before
+//       transform: scale(1) translate(-50%, -50%)
+//       //background-color: #fff
+//       z-index: -1
+// .input-area
+//   position: relative
+//   display: flex
+//   input
+//     flex-grow: 1
+//     height: 42px
+//     border: none
+//     padding: 0
+//     border-bottom: 1px solid #4f4f4f
+//     transition: border-color 0.3s
+//     &:hover
+//       border-color: #0ba14b
+//     &::placeholder
+//       color: #828282
+
+// .input-area2
+//   display: flex
+//   flex-direction: column
+//   span
+//     font-size: 12px
+//     margin-bottom: 8px
+//   input
+//     flex-grow: 1
+//     height: 48px
+//     font-size: 12px
+//     border: none
+//     padding: 0 16px
+//     border-radius: 3px
+//     background-color: #f2f2f2
+
+// .loader
+//   height: 50px
+//   transform-origin: bottom center
+//   animation: rotate 3s linear infinite
+//   position: absolute
+//   top: 45%
+//   left: 45%
+//   z-index: 10
+// //display: none
+// //&.is-active
+// //  display: block
+
+// .circle
+//   display: inline-block
+//   background-color: #247eca
+//   height: 30px
+//   width: 30px
+//   border-radius: 50%
+//   transform: scale(0)
+//   animation: grow 1.5s linear infinite
+//   margin: -5px
+
+// .circle:nth-child(2)
+//   background-color: #247eca
+//   animation-delay: 0.75s
+
+// @keyframes rotate
+//   to
+//     transform: rotate(360deg)
+
+// @keyframes grow
+//   50%
+//     transform: scale(1)
+
+// .ui-checkbox
+//   input
+//     width: 0.1px
+//     height: 0.1px
+//     opacity: 0
+//     position: absolute
+//     top: 0
+//     left: 0
+//     &:checked
+//       + label
+//         &::before
+//           background: #247eca
+//           border-color: #247eca
+//         &::after
+//           transform: translateY(-50%) scale(1)
+//     &.has-error
+//       + label
+//         &::before
+//           border-color: #f45b63
+//           box-shadow: 0px 0px 4px #f45b63
+
+//   label
+//     cursor: pointer
+//     display: block
+//     position: relative
+//     width: 100%
+//     &::before
+//       background-color: #e0e0e0
+//       border-radius: 4px
+//       content: ' '
+//       cursor: pointer
+//       display: inline-block
+//       left: 0
+//       position: absolute
+//       size: 22px
+//       top: 50%
+//       transform: translateY(-50%)
+//       transition: all 0.3s ease-in-out
+//       vertical-align: middle
+//     &::after
+//       content: ' '
+//       display: inline-block
+//       left: 6px
+//       position: absolute
+//       size: 10px 8px
+//       top: 50%
+//       transform: translateY(-50%) scale(0)
+//       background: svg-load('../icons/svg-mono/checkmark.svg', fill=white) no-repeat center
+//       background-size: cover
+//       transition: transform 0.2s ease
+//     span
+//       cursor: pointer
+//       display: inline-block
+//       padding-left: 30px
+//       vertical-align: center
+//       font-weight: normal
+//       font-size: 15px
+//       line-height: 22px
+//       color: #202020
+//       a
+//         text-decoration: underline
+//         &:hover
+//           text-decoration: none
+
+// +r($sm)
+//   .ui-checkbox
+//     label
+//       span
+//         font-size: 10px

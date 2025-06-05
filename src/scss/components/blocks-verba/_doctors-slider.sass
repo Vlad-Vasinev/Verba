@@ -1,0 +1,59 @@
+.usluga-page-doctors-slider
+  // padding: 24px
+  background: #fff
+  // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
+
+  overflow: hidden
+  +r($sm)
+    // padding: 16px
+  .swiper-slide
+    background: #fff
+    z-index: 0
+    transition: z-index 0s 0s, transform .4s .05s ease-in-out, -webkit-transform .4s .05s ease-in-out
+    &.swiper-slide-active
+      z-index: 99
+  .swiper-navigation
+    width: 100%
+    padding: 16px 0 0
+    // border-top: 1px solid #f2f2f2
+    &-inner
+      width: fit-content
+      display: flex
+      align-items: center
+      margin: 0 auto
+    .swiper-pagination
+      width: fit-content
+      position: relative
+      top: unset
+      left: unset
+      bottom: unset
+      .swiper-pagination-current, .swiper-pagination-total
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 25px
+        color: #202020
+      .swiper-pagination-current
+        margin-right: 10px
+      .swiper-pagination-total
+        margin-left: 10px
+    .swiper-button-prev, .swiper-button-next
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 40px
+      height: 40px
+      position: relative
+      background-image: none
+      background: #f5f5f5
+      border-radius: 100%
+      cursor: pointer
+      margin: 0
+      top: unset
+      left: unset
+      right: unset
+      bottom: unset
+    .swiper-button-prev
+      margin-right: 75px
+    .swiper-button-next
+      margin-left: 75px

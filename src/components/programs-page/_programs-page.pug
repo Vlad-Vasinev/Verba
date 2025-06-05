@@ -1,0 +1,134 @@
+.page__container
+  .main.main-programs
+    .reviews-mobile 
+      .main__reviews
+        .stories-block_reviews(js-stories-img-slider)
+          .main__mobile
+            - var i = 0;
+            while i < 5
+              .stories-item.swiper-slide(data-video-src='img/product-1.mp4', data-preview-src='img/reviewPrev1.png')
+                .stories-item__play
+                  <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.99979 0.631403L18.9156 9.81779C20.2492 10.5875 20.2492 12.5124 18.9156 13.2821L2.99979 22.4685C1.66646 23.2381 0 22.2758 0 20.7363V2.36358C0 0.824085 1.66645 -0.138181 2.99979 0.631403Z" fill="white"/>
+                  </svg>
+                .stories-item-preview
+                  img(src='img/reviews1.png')
+                .stories-item-desc
+                  h5 Amosova Rose
+              - i++
+  .page__content-wrapper
+    .page__block
+      .page__heading
+        h1 Pregnancy management service
+    .page__block
+      .main__slider
+        .main__programs-text 
+          |The experience and extensive practice of the gynecologists of the Verba Clinic
+          |allows us to use modern means for the successful
+          |treatment of a wide variety of gynecological diseases.
+        .main__slider-layout(js-main-slider)
+          .main__slider-wrapper
+            .main__slider-slide
+              img(src="img/main-slider-1.jpg" alt="verba procedure")
+            .main__slider-slide
+              img(src="img/main-slider-1.jpg" alt="verba procedure")
+            .main__slider-slide
+              img(src="img/main-slider-1.jpg" alt="verba procedure")
+            .main__slider-slide
+              img(src="img/main-slider-1.jpg" alt="verba procedure")
+            .main__slider-slide
+              img(src="img/main-slider-1.jpg" alt="verba procedure")
+            .main__slider-slide
+              img(src="img/main-slider-1.jpg" alt="verba procedure")
+            .main__slider-slide
+              img(src="img/main-slider-1.jpg" alt="verba procedure")
+            .main__slider-slide
+              img(src="img/main-slider-1.jpg" alt="verba procedure")
+          .navigation-fraction
+            .navigation-fraction__prev
+              svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M1.5 8L8.5 14.9958M1.5 8L8.5 1.00391M1.5 8H30.5' stroke='black')
+            .navigation-fraction__pagination
+            .navigation-fraction__next
+              svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M29.5 7.99976L22.5 1.00391M29.5 7.99976L22.5 14.9959M29.5 7.99976L0.499999 7.99976' stroke='black')
+    .page__block
+      h2 All examinations and patient appointments are carried out according to an individual schedule, without waiting or queues, in a friendly atmosphere.
+    .page__block
+      h2.main__doctors-title.title-primary The doctor who is monitoring the pregnancy
+      include ../blocks/_doctor-slider-card
+    .page__block 
+      .text-primary
+        |Close attention to your physical and psychological state during pregnancy
+        |is the main task of the expectant mother. The right choice of medical clinic, consultations with an
+        |experienced gynecologist are the key to a successful pregnancy and
+        |subsequent birth.
+    .page__block
+      .main__doctors 
+        h2.main__doctors-title.title-primary Doctors are accepted into the program
+        .main__doctors-slider 
+          .doctor-cards-slider(js-doctor-cards-slider)
+            .doctor-cards-slider__wrapper
+              .doctor-cards-slider__item
+                .doctor-cards-slider__img
+                  img(src='img/doctorCard-1.png')
+                .doctor-cards-slider__description
+                  h3 Badikova Ekaterina
+                  h5 Pediatrician
+              .doctor-cards-slider__item
+                .doctor-cards-slider__img
+                  img(src='img/doctorCard-1.png')
+                .doctor-cards-slider__description
+                  h3 Badikova Ekaterina
+                  h5 Pediatrician
+              .doctor-cards-slider__item
+                .doctor-cards-slider__img
+                  img(src='img/doctorCard-1.png')
+                .doctor-cards-slider__description
+                  h3 Badikova Ekaterina
+                  h5 Pediatrician
+              .doctor-cards-slider__item
+                .doctor-cards-slider__img
+                  img(src='img/doctorCard-1.png')
+                .doctor-cards-slider__description
+                  h3 Badikova Ekaterina
+                  h5 Pediatrician
+            .navigation-fraction
+              .navigation-fraction__prev
+                svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M1.5 8L8.5 14.9958M1.5 8L8.5 1.00391M1.5 8H30.5' stroke='black')
+              .navigation-fraction__pagination
+              .navigation-fraction__next
+                svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M29.5 7.99976L22.5 1.00391M29.5 7.99976L22.5 14.9959M29.5 7.99976L0.499999 7.99976' stroke='black')
+    .page__block 
+      .block-text 
+        p
+          |The first trimester is the most difficult and responsible period of pregnancy.
+          |At this time, hormonal and physiological changes occur in the woman's body.
+          |Pregnancy management is necessary in order to maintain the health of the expectant mother and to identify possible pathologies in fetal development in time. In the early stages, you need to be under the supervision of a|
+          |gynecologist and undergo an examination by specialized doctors.
+        p 
+          |In the second and third trimesters, the internal organs of the fetus are actively developing.
+          |At 19-21 weeks, the second ultrasound screening is done, at 30-32 weeks - the third.
+          |This is necessary in order to identify possible pathologies. At 38-40 weeks
+          |the pregnant woman takes tests, undergoes an examination by a gynecologist before childbirth.
+          |The program includes a doctor's consultation on childbirth and a postpartum examination.
+    .page__block
+      include ../blocks-verba/_bottom-banner
+  // шаблон можно разместить где удобно
+  template#usluga-offer-template 
+    .usluga-offer 
+      .usluga-offer__inner 
+        .usluga-offer__title 
+          h3 Pregnancy management
+        ul.usluga-offer__list 
+          li.h6 from 2 days
+          li.h6 10 sets of analyses
+          li.h6 4 studies
+          li.h6 5 consultations with doctors
+        .usluga-offer__price 
+          h5._no-sale 23 040 ₽
+          h4._sale 12 500 ₽
+        .usluga-offer__button
+          button.fill-button(js-modal-open data-modal-name="appoint-form" data-modal-heading='Form Heading' data-more='Ведение беременности') Order a program

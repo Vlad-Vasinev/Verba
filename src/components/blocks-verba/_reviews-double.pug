@@ -1,0 +1,17 @@
+.stories-block_reviews_double(js-stories-img-slider-double)
+  .swiper-wrapper
+    - var i = 0;
+    while i < 6
+      .stories-item.swiper-slide(data-video-src='img/waffle.mp4', data-preview-src='img/reviewPrev1.png')
+        .stories-item-preview
+          img(src='img/reviews1.png')
+        .stories-item-desc
+          h5 Амосова Роза 222
+      - i++
+.stories-container_double
+  .stories-bg
+  .stories-container-inner_double
+    .fullscreen-stories_double.swiper-wrapper
+    .orange-button записаться на прием
+    .close-btn
+    .pagination-container

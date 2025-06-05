@@ -1,0 +1,118 @@
+
+.main 
+  .reviews-mobile 
+    .main__reviews
+      .stories-block_reviews(js-stories-img-slider)
+        .main__mobile
+          - var i = 0;
+          while i < 5
+            .stories-item.swiper-slide(data-video-src='img/waffle.mp4', data-preview-src='img/reviewPrev1.png')
+              .stories-item__play
+                <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.99979 0.631403L18.9156 9.81779C20.2492 10.5875 20.2492 12.5124 18.9156 13.2821L2.99979 22.4685C1.66646 23.2381 0 22.2758 0 20.7363V2.36358C0 0.824085 1.66645 -0.138181 2.99979 0.631403Z" fill="white"/>
+                </svg>
+              .stories-item-preview
+                img(src='img/reviews1.png')
+              .stories-item-desc
+                h5 Amosova Rose
+            - i++
+.page__container 
+  .page__block
+    .page__heading  
+      h1 About Clinic
+.page__block
+  .main__slider
+    .main__programs-text 
+      |The experience and extensive practice of the gynecologists of the Verba Clinic
+      |allows us to use modern means for the successful
+      |treatment of a wide variety of gynecological diseases.
+    .main__slider-layout(js-main-slider)
+      .main__slider-wrapper
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide 
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+      .navigation-fraction
+        .navigation-fraction__prev
+          svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M1.5 8L8.5 14.9958M1.5 8L8.5 1.00391M1.5 8H30.5' stroke='black')
+        .navigation-fraction__pagination
+        .navigation-fraction__next
+          svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M29.5 7.99976L22.5 1.00391M29.5 7.99976L22.5 14.9959M29.5 7.99976L0.499999 7.99976' stroke='black')
+
+.page__block
+  h2 All examinations and patient appointments are carried out according to an individual schedule, without waiting or queues, in a friendly atmosphere.
+
+.page__block
+  a.main__consultation(href="#")
+    p
+      |Sign up for a consultation via
+      span WhatsApp
+.page__block
+  .main__doctors 
+    h2.main__doctors-title.title-primary Our doctors
+    .main__doctors-slider 
+      .doctor-cards-slider(js-doctor-cards-slider)
+        .doctor-cards-slider__wrapper
+          .doctor-cards-slider__item
+            .doctor-cards-slider__img
+              img(src='img/doctorCard-1.png')
+            .doctor-cards-slider__description
+              h3 Badikova Ekaterina
+              h5 Pediatrician
+          .doctor-cards-slider__item
+            .doctor-cards-slider__img
+              img(src='img/doctorCard-1.png')
+            .doctor-cards-slider__description
+              h3 Badikova Ekaterina
+              h5 Pediatrician
+          .doctor-cards-slider__item
+            .doctor-cards-slider__img
+              img(src='img/doctorCard-1.png')
+            .doctor-cards-slider__description
+              h3 Badikova Ekaterina
+              h5 Pediatrician
+          .doctor-cards-slider__item
+            .doctor-cards-slider__img
+              img(src='img/doctorCard-1.png')
+            .doctor-cards-slider__description
+              h3 Badikova Ekaterina
+              h5 Pediatrician
+        .navigation-fraction
+          .navigation-fraction__prev
+            svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M1.5 8L8.5 14.9958M1.5 8L8.5 1.00391M1.5 8H30.5' stroke='black')
+          .navigation-fraction__pagination
+          .navigation-fraction__next
+            svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M29.5 7.99976L22.5 1.00391M29.5 7.99976L22.5 14.9959M29.5 7.99976L0.499999 7.99976' stroke='black')
+.page__block
+  .main__reviews
+    .main__reviews-title.title-primary Reviews about Verba secret
+    .stories-block_reviews(js-reviews-cards-slider)
+      .swiper-wrapper
+        - var i = 0;
+        while i < 4
+          .stories-item.swiper-slide(data-video-src='img/product-1.mp4', data-preview-src='img/reviewPrev1.png')
+            .stories-item__play
+              <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.99979 0.631403L18.9156 9.81779C20.2492 10.5875 20.2492 12.5124 18.9156 13.2821L2.99979 22.4685C1.66646 23.2381 0 22.2758 0 20.7363V2.36358C0 0.824085 1.66645 -0.138181 2.99979 0.631403Z" fill="white"/>
+              </svg>
+            .stories-item-preview
+              img(src='img/reviews1.png')
+            .stories-item-desc
+              h5 Amosova Rose
+          - i++

@@ -1,0 +1,94 @@
+.offer-table
+  display: flex
+  flex-direction: column
+  .offer-table-head
+    display: grid
+    padding: 16px 0
+    padding-right: 32px
+    grid-template: auto / 90% fit-content(10%)
+    width: 100%
+    p
+      margin: 0
+    p:nth-of-type(2)
+      margin-left: 16px
+      +r($sm)
+        display: none
+
+  .offer-table-item
+    display: grid
+    width: 100%
+    grid-template: auto / 90% fit-content(10%)
+    border: 1px solid #E0E0E0
+    border-bottom: none
+    padding: 20px 16px
+    transition: background-color 0.3s
+    cursor: pointer
+    *
+      pointer-events: none
+    +r($sm)
+      display: flex
+      flex-direction: column
+    &:hover
+      background-color: #F2F2F2
+
+    .price
+      width: fit-content
+      align-self: center
+      background: #BE48B4
+      border-radius: 6px
+      padding: 2px 6px
+      color: #fff
+      white-space: nowrap
+      text-align: center
+      +r($sm)
+        margin-top: 8px
+        align-self: flex-start
+    &:only-of-type
+      border-radius: 16px
+
+  .offer-table-item:nth-of-type(2)
+    border-top-left-radius: 16px
+    border-top-right-radius: 16px
+  .offer-table-item:last-of-type
+    border-bottom-left-radius: 16px
+    border-bottom-right-radius: 16px
+    border-bottom: 1px solid #E0E0E0
+
+.offer-table:has(.offer-table-item .name .ph3)
+  .offer-table-head
+    display: none
+  div.offer-table-item
+    padding: 16px 24px
+    grid-template: auto / 88% auto
+    border-radius: 0
+    +r($sm)
+      padding: 16px 16px
+      display: flex
+      flex-direction: column
+
+    .name
+      .ph5
+        margin-top: 4px
+    .price
+      height: fit-content
+      padding: 8px 16px
+      border-radius: 24px
+      align-self: center
+      justify-self: flex-end
+      text-transform: uppercase
+      transition: background-color 0.3s
+      +r($sm)
+        align-self: flex-start
+        margin-top: 16px
+    &:hover
+      .price
+        background-color: #d283ca
+    &:last-of-type
+      border-bottom-left-radius: 16px
+      border-bottom-right-radius: 16px
+      border-bottom: 1px solid #E0E0E0
+    &:nth-of-type(2)
+      border-top-left-radius: 16px
+      border-top-right-radius: 16px
+    &:only-of-type
+      border-radius: 16px

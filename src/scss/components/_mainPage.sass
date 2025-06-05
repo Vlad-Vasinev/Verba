@@ -1,0 +1,485 @@
+
+
+.main 
+  &__mobile 
+    +r($sm)
+      display: flex
+      justify-content: flex-start
+      //justify-content: space-between
+  .swiper-android 
+    .navigation-fraction
+      +r($sm)
+        z-index: 1000
+        position: relative
+        top: 118px
+  .swiper-pagination-bullet + .swiper-pagination-bullet
+    +r($sm)
+      margin-left: 10px
+      margin-right: 0
+  &__title 
+    margin: aCalc(108) auto aCalc(120)
+    font-size: aCalc(60)
+    line-height: aCalc(64)
+    +r($sm)
+      max-width: 343px
+      font-size: 28px
+      line-height: 32px
+      margin: 18px 0 24px
+      width: 100%
+  &__subtitle-info 
+    font-size: aCalc(16)
+    font-style: normal
+    font-weight: 600
+    line-height: aCalc(20)
+    color: #BE48B4
+    margin-bottom: aCalc(8)
+    +r($sm)
+      font-size: 13px
+      line-height: 18px
+      margin-bottom: 8px
+  &__subtitle 
+    margin-top: aCalc(6)
+    display: block
+    background-color: #C9CBFA
+    border-radius: aCalc(24)
+    max-width: aCalc(410)
+    min-height: aCalc(96)
+    width: 100%
+    padding: aCalc(16)
+    transition: background 1.3s cubic-bezier(.22,1,.36,1),-webkit-background 1.3s cubic-bezier(.22,1,.36,1)
+    +r($sm)
+      display: initial
+      padding: 0 4px
+      min-height: 38px
+      margin-left: 8px
+      max-width: 180px
+  &__subtitle.subtitle_active_first
+    background-color: #C9CBFA
+  &__subtitle.subtitle_active_last
+    background-color: #E4BDF6
+  &__subtitle.subtitle_active_end
+    background-color: #FAC9C9
+  &__links 
+    margin: aCalc(56) auto 0
+    display: block
+    max-width: max-content
+    padding: aCalc(16) aCalc(32)
+    color: #ffffff
+    font-size: aCalc(18)
+    font-style: normal
+    font-weight: 600
+    line-height: aCalc(26)
+    border-radius: aCalc(12)
+    background-color: #BE48B4
+    +r($sm)
+      display: none
+  &__programs 
+    // margin-top: aCalc(120)
+    +r($sm)
+      // margin-top: 60px
+    &-text 
+      margin-bottom: aCalc(48)
+      font-size: aCalc(30)
+      line-height: aCalc(38)
+      +r($sm)
+        font-size: 20px
+        line-height: 24px
+        margin-bottom: 24px
+  &__slider 
+    padding: aCalc(40) 0 aCalc(40) aCalc(40)
+    // margin: aCalc(120) auto
+    background-color: #F6F6F6
+    border-radius: aCalc(24)
+    +r($sm)
+      // margin: 60px auto
+      padding: 24px 16px
+      border-radius: 32px
+      position: relative
+      left: -16px
+      z-index: 100
+      width: 100vw
+    .navigation-fraction__prev, .navigation-fraction__next
+      +r($sm)
+        display: none
+    .swiper-pagination-bullet + .swiper-pagination-bullet
+      +r($sm)
+        margin-left: 10px
+        margin-right: 0
+    .swiper-pagination-bullet
+      border-radius: 8px
+      width: 6px
+      height: 6px
+      background-color: #dcb5f2
+    .swiper-pagination-bullet.swiper-pagination-bullet-active
+      background-color: #BE48B4
+      transform: scale(1.3)
+    .navigation-fraction
+      display: flex
+      max-width: max-content
+      margin: aCalc(24) auto 0
+      +r($sm)
+        margin: 16px auto 0
+    &-layout 
+      margin: aCalc(48) auto 0
+      overflow: hidden
+      +r($sm)
+        overflow: visible
+    &-wrapper 
+      @extend .swiper-wrapper
+    &-slide
+      @extend .swiper-slide
+      max-width: max-content
+      +r($sm)
+        max-width: 100%
+      img 
+        max-height: aCalc(500)
+        height: 100%
+        object-fit: cover
+        max-width: aCalc(750)
+        border-radius: aCalc(16)
+        width: 100%
+        +r($sm)
+          border-radius: 16px
+          max-width: 100%
+          max-height: 230px
+    &-slide:last-child
+      img 
+        padding-right: aCalc(10)
+        +r($sm)
+          padding-right: 10px
+.stories-container-inner 
+  .navigation-fraction 
+    +r($sm)
+      position: absolute
+      bottom: -50px
+      left: 0
+      right: 0 
+      margin: 0 auto
+      z-index: 1000
+
+.main__reviews
+  .stories-block_reviews
+    .stories-item 
+      max-width: aCalc(223)
+      +r($sm)
+        max-width: 188px
+        max-height: 224px
+      img 
+        +r($sm)
+          max-width: 188px
+          max-height: 224px
+      transition: transform .3s ease
+      &:hover 
+        transform: translateY(aCalc(-10))
+        +r($sm)
+          transform: translateY(0)
+    // .stories-item + .stories-item
+    //   margin-left: aCalc(10)
+      +r($sm)
+        margin-left: 0
+
+.main
+  .stories-container
+    .navigation-fraction
+      .navigation-fraction__pagination
+        .swiper-pagination-bullet 
+          background-color: #ffffff 
+          opacity: 0.4
+        .swiper-pagination-bullet.swiper-pagination-bullet-active
+          background-color: #BE48B4
+          opacity: 1
+.main
+  .reviews-mobile 
+    .main__reviews 
+      .stories-block_reviews 
+        .swiper-wrapper 
+          +r($sm)
+            justify-content: space-between
+            min-height: 65px
+      .stories-item
+        .stories-item-preview 
+          +r($sm)
+            padding: 2px
+            border: 1px solid #F1EBF1
+            border-radius: 50%
+    display: none
+    +r($sm)
+      //margin-top: 88px
+      padding: 0 16px
+      display: block
+    .stories-item + .stories-item 
+      margin-left: 12px 
+    .stories-item:first-child 
+      position: relative
+      &::before 
+        width: aCalc(22)
+        height: aCalc(25)
+        top: 50%
+        transform: translateY(-50%)
+        left: 0
+        right: 0
+        margin: 0 auto
+        position: absolute
+        content: ""
+        background-image: url('../../img/stories-play.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        z-index: 10
+        +r($sm)
+          width: 14px
+          height: 16px
+    .stories-item, .stories-item-preview, .swiper-slide
+      max-width: 58px
+      min-width: auto
+      height: 58px
+      .stories-item-desc
+        display: none
+      img 
+        border-radius: 50%
+        min-height: auto
+        width: 58px
+        height: 58px
+
+.video-blocks.service-block
+  margin-bottom: aCalc(10)
+  .main__video
+    .main__video-el:last-child 
+      +r($sm)
+        display: none
+    // .main__video-el
+    //   +r($sm) 
+    //     -webkit-transform: translate3d(0, 0, 0)
+    //     -webkit-backface-visibility: hidden
+    //     -webkit-transform-style: preserve-3d
+    // .main__video-name 
+    //   +r($sm) 
+    //     -webkit-transform: translate3d(0, 0, 0)
+    //     -webkit-backface-visibility: hidden
+    //     -webkit-transform-style: preserve-3d
+  .navigation-fraction
+    +r($sm)
+      display: none
+  +r($sm)
+    margin-bottom: 6px
+
+
+.slider-programs
+  .navigation-fraction
+    +r($sm)
+      margin-top: 4px
+  overflow: hidden
+  +r($sm)
+    overflow: visible
+  .navigation-fraction
+    display: flex
+  .navigation-fraction__pagination 
+    span 
+      color: #000000
+      margin-left: 0
+  &__wrapper
+    @extend .swiper-wrapper
+    +r($sm)
+  &__title
+    position: relative
+    order: 1
+    flex-grow: 2
+    text-align: center
+    font-size: aCalc(20)
+    font-weight: 600
+    line-height: aCalc(26)
+    padding: 0
+    +r($sm)
+      max-width: 183px
+      text-align: left
+      font-size: 16px
+      line-height: 22px
+  &__subtitle
+    position: relative
+    order: 0
+    font-size: aCalc(14)
+    line-height: aCalc(18)
+    text-align: center
+    margin-bottom: aCalc(8)
+    +r($sm)
+      margin-bottom: 6px
+      font-size: 12px
+      line-height: 16px
+      text-align: left
+  &__el 
+    @extend .swiper-slide
+    display: flex
+    flex-direction: column
+    padding: aCalc(24) aCalc(24) aCalc(26)
+    border-radius: aCalc(24)
+    min-width: aCalc(300)
+    min-height: aCalc(402)
+    width: 100%
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    +r($sm)
+      border-radius: 16px
+      padding: 16px
+      min-width: 343px
+      height: 192px
+  // .slider-programs__el
+  //   +r($sm)
+  //     background-position: 104% 50%
+  //     background-size: 50%
+  //     background-color: #EDD1C3
+  &__prices
+    position: relative
+    display: flex
+    align-items: center
+    order: 2
+    background-color: #ffffff
+    padding: aCalc(2) aCalc(8)
+    border-radius: aCalc(6)
+    max-width: max-content
+    margin: 0 auto
+    +r($sm)
+      margin-left: 0
+      border-radius: 6px
+      padding: 2px 8px
+  &__price
+    text-align: center
+    color: #BE48B4
+    font-size: aCalc(16)
+    font-weight: 600
+    line-height: aCalc(20)
+    position: relative
+    +r($sm)
+      font-size: 13px
+      line-height: 18px
+    &::before 
+      position: absolute
+      content: ""
+      width: 100%
+      top: 50%
+      left: 0
+      background-color: #202020
+      height: 1px
+  span 
+    font-size: aCalc(18)
+    font-weight: 600
+    line-height: aCalc(26)
+    margin-left: aCalc(8)
+    color: #BE48B4
+    +r($sm)
+      margin-left: 8px
+      font-size: 16px
+      line-height: 24px
+  +r($sm)
+    .navigation-fraction__prev, .navigation-fraction__next
+      +r($sm)
+        display: none
+    .swiper-pagination-bullet + .swiper-pagination-bullet
+      margin-left: 10px
+      margin-right: 0
+    .swiper-pagination-bullet
+      margin-right: 0
+      border-radius: 8px
+      width: 6px
+      height: 6px
+      background-color: #dcb5f2
+    .swiper-pagination-bullet.swiper-pagination-bullet-active
+      background-color: #BE48B4
+      transform: scale(1.3)
+
+.main__doctors 
+  // margin: aCalc(120) auto
+  .doctor-cards-slider 
+    +r($sm)
+  .doctor-cards-slider__wrapper
+    +r($sm)
+  .doctor-cards-slider__item
+    +r($sm)
+      overflow: hidden
+  .navigation-fraction 
+    +r($sm)
+      margin-top: 24px
+  // +r($sm)
+  //   margin: 60px auto
+  &-title 
+    margin-bottom: aCalc(30)
+    padding: 0 !important
+    +r($sm)
+      margin-bottom: 24px
+  &-slider 
+    .doctor-cards-slider__img 
+      border-radius: aCalc(24)
+      background-color: #F1EBF1
+      padding: aCalc(36) 0 0 aCalc(26)
+      +r($sm)
+        min-width: 220px
+        min-height: 316px
+        border-radius: 16px
+        // padding: 36px 24px 0
+        padding: 36px 0 0 48px
+      +r($ms + 6)
+        padding: 36px 24px 0
+      img 
+        border-radius: aCalc(24)
+        +rmin($uhd + 1)
+          max-width: aCalc(400)
+          width: 100%
+        +r($sm)
+          max-width: 196px
+          max-height: 323px
+          border-radius: 24px
+
+.main__reviews 
+  &-title 
+    margin-bottom: aCalc(32)
+    +r($sm)
+      margin-bottom: 24px
+  .stories-item
+    +r($sm)
+        max-width: 170px
+    .stories-item-preview
+      &::after 
+        display: none
+    min-width: aCalc(223) 
+    width: 100%
+    &-preview 
+      position: relative
+      +r($sm)
+        box-sizing: content-box
+    &__play 
+      position: absolute
+      border-radius: 50%
+      bottom: aCalc(8)
+      display: grid
+      justify-content: center
+      align-content: center
+      right: aCalc(8)
+      z-index: 100
+      width: aCalc(48)
+      height: aCalc(48)
+      background-color: #ffffff
+      +r($sm)
+        display: none
+      svg 
+        width: aCalc(14)
+        height: aCalc(14)
+        path 
+          fill: #000000
+    &-desc 
+      top: aCalc(8) !important
+      left: aCalc(8) !important
+      padding: aCalc(6) aCalc(12) !important
+      +r($sm)
+        top: 12px !important
+        left: 12px !important
+        padding: 6px 12px !important
+    img 
+      +r($sm)
+
+  .stories-item img
+    min-width: aCalc(223)
+    min-height: aCalc(313)
+    height: 100%
+    +r($sm)
+      max-width: 170px
+      width: 170px
+      max-height: 224px

@@ -1,0 +1,27 @@
+.five-cells-gird-gallery
+  display: grid
+  grid-template-columns: 2fr 1fr 1fr
+  gap: 20px
+  width: 100%
+  +r($sm)
+    gap: 15px
+    grid-template-columns: 0.5fr 0.5fr
+  .five-cells-gird-gallery__item
+    width: 100%
+    aspect-ratio: 1
+    img
+      width: 100%
+      height: 100%
+      border-radius: 24px
+      object-fit: cover
+      +r($sm)
+        // display: none
+  .five-cells-gird-gallery__item
+    
+    &:first-child
+      grid-area: 1/1/3/2
+      +r($sm)
+        grid-area: 1/1/2/3
+         
+
+

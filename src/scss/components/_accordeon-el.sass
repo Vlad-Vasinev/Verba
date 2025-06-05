@@ -1,0 +1,91 @@
+
+
+.accordeon-el
+  position: relative
+  &__block
+    height: 100%
+    width: 100% 
+    .h3 
+      margin-bottom: aCalc(16)
+      +r($sm)
+        margin-bottom: 16px
+    .h4
+      a, span
+        color: #BE48B4
+    .h4 + .h4 
+      margin-top: aCalc(8)
+      +r($sm)
+        margin-bottom: 8px
+    .btnm, .h5
+      margin-top: aCalc(8)
+      +r($sm)
+        margin-top: 8px
+    a 
+      display: block
+      max-width: max-content
+  &__head
+    position: relative
+    z-index: 10
+    cursor: pointer
+    padding: aCalc(22)
+    background-color: #F6F6F6
+    border-radius: aCalc(20)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: aCalc(20)
+    &:hover 
+      .accordeon-el__icon svg 
+        transform: rotate(-90deg)
+    +r($sm)
+      padding: 16px
+      border-radius: 16px
+      margin-bottom: 12px
+  &__icon 
+    svg 
+      width: aCalc(24)
+      height: aCalc(24)
+      transform: rotate(90deg)
+      transition: transform .3s
+      +r($sm)
+        width: 24px
+        height: 24px
+  &__list 
+    display: flex
+    flex-direction: column
+    gap: aCalc(12)
+    padding: 0
+    li 
+      position: relative
+      &::before 
+        position: absolute
+        content: ""
+        width: aCalc(6)
+        height: aCalc(6)
+        border-radius: 50%
+        left: aCalc(-14)
+        top: aCalc(8)
+        z-index: 10
+        background-color: #BE48B4
+        +r($sm)
+          left: -12px
+          top: 5px
+          width: 6px
+          height: 6px
+    +r($sm)
+      gap: 12px 
+      padding-left: 12px
+  &__body
+    overflow: hidden
+    // pointer-events: none
+    max-height: 0
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1)
+    &.accordeon-el__body_active 
+      max-height: aCalc(7000)
+      transition: max-height .6s ease-in-out
+      +r($sm)
+        max-height: 7000px
+      .accordeon-el__block 
+        margin-bottom: aCalc(20)
+        +r($sm)
+          margin-bottom: 24px

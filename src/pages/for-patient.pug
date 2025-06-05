@@ -1,0 +1,5 @@
+extends ./shared/_layout
+prepend head 
+  - const bodyClass = 'patientPage'
+block content
+  include ../components/for-patient/_for-patient

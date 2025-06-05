@@ -1,0 +1,277 @@
+
+.main 
+  .reviews-mobile 
+    .main__reviews
+      .stories-block_reviews(js-stories-img-slider)
+        .main__mobile
+          - var i = 0;
+          while i < 5
+            .stories-item.swiper-slide(data-video-src='img/waffle.mp4', data-preview-src='img/reviewPrev1.png')
+              .stories-item__play
+                <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.99979 0.631403L18.9156 9.81779C20.2492 10.5875 20.2492 12.5124 18.9156 13.2821L2.99979 22.4685C1.66646 23.2381 0 22.2758 0 20.7363V2.36358C0 0.824085 1.66645 -0.138181 2.99979 0.631403Z" fill="white"/>
+                </svg>
+              .stories-item-preview
+                img(src='img/reviews1.png')
+              .stories-item-desc
+                h5 Amosova Rose
+            - i++
+.page__block
+  .main
+    h1.main__title
+      .main__subtitle-info Verba secret is always near
+      |300 women become mothers together with
+      <br mob-br />
+      |Verba 
+      span.main__subtitle.subtitle_active_first.txt-rotate(data-period="1000" data-rotate='["every week", "every day", "every year"]')
+  .video-blocks.main-block(js-video-slider)
+    .main__video.main-page.swiper-wrapper
+      a.main__video-el.el-first.swiper-slide(href="#")
+        .main__video-name 
+          |Pregnancy Management
+        <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-1.jpg">
+          <source src="img/video/preview-3.mp4" type="video/mp4">
+          <source src="img/video/video-1.webm" type="video/webm">
+        </video>
+        .main__video-price 
+          |from 48 000 ₽
+      a.main__video-el.el-second.swiper-slide(href="#")
+        .main__video-name 
+          |Pregnancy Management
+        <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-2.jpg">
+          <source src="img/video/preview-1.mp4" type="video/mp4">
+          <source src="img/video/video-1.webm" type="video/webm">
+        </video>
+        .main__video-price 
+          |from 48 000 ₽
+      a.main__video-el.el-third.swiper-slide(href="#")
+        .main__video-name 
+          |Pregnancy Management
+        <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-3.jpg">
+          <source src="img/video/preview-4.mp4" type="video/mp4">
+          <source src="img/video/video-1.webm" type="video/webm">
+        </video>
+        .main__video-price 
+          |from 48 000 ₽
+      a.main__video-el.el-fourth.swiper-slide(href="#")
+        .main__video-name 
+          |Pregnancy Management
+        <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-4.jpg">
+          <source src="img/video/preview-2.mp4" type="video/mp4">
+          <source src="img/video/video-1.webm" type="video/webm">
+        </video>
+        .main__video-price 
+          |from 48 000 ₽
+      a.main__video-el.el-third.swiper-slide(href="#")
+        .main__video-name 
+          |Pregnancy Management
+        <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-1.jpg">
+          <source src="img/video/preview-3.mp4" type="video/mp4">
+          <source src="img/video/video-3.webm" type="video/webm">
+        </video>
+        .main__video-price 
+          |from 48 000 ₽
+      a.main__video-el.el-fourth.swiper-slide(href="#")
+        .main__video-name 
+          |Pregnancy Management
+        <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-1.jpg">
+          <source src="img/video/preview-3.mp4" type="video/mp4">
+          <source src="img/video/video-3.webm" type="video/webm">
+        </video>
+        .main__video-price 
+          |from 48 000 ₽
+      a.main__video-el.el-first.swiper-slide(href="#")
+        .main__video-name 
+          |Pregnancy Management
+        <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-1.jpg">
+          <source src="img/video/preview-1.mp4" type="video/mp4">
+          <source src="img/video/video-1.webm" type="video/webm">
+        </video>
+        .main__video-price 
+          |from 48 000 ₽
+      a.main__video-el.el-second.swiper-slide(href="#")
+        .main__video-name 
+          |Pregnancy Management
+        <video class="video__el video__el-main" data-idBig = "0" loop autoplay="autoplay" muted playsinline webkit-playsinline preload="auto" poster="img/poster-1.jpg">
+          <source src="img/video/preview-1.mp4" type="video/mp4">
+          <source src="img/video/video-1.webm" type="video/webm">
+        </video>
+        .main__video-price 
+          |from 48 000 ₽
+      a.main__video-el.swiper-slide(href="#")
+        span
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L14 17.5M19 12L14 6.5" stroke="#BE48B4" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          p All services
+    .navigation-fraction
+      .navigation-fraction__pagination
+  a.main__links(href="#") All services
+.page__block
+  .main__programs 
+    .main__programs-text 
+      |Comprehensive examination programs are designed specifically for women
+      |aged from 18 years and are aimed at diagnosing diseases of the female reproductive system.
+  .slider-programs(js-programs-slider)
+    .slider-programs__wrapper
+      a.slider-programs__el(href="#") 
+        .slider-programs__img 
+          <picture (js-lazy)>
+            <source media="(min-width:768px)" srcset="../../img/programs-bg-1.jpg">
+            <source media="(max-width:768px)" srcset="../../img/programs-bg-mobile.png">
+            <img class="catalog-img-primary" src="../../img/programs-bg-1.jpg" alt="Agave image 1">
+          </picture>
+        .slider-programs__subtitle PROGRAM
+        h2.slider-programs__title  
+          |Medical examination of a child aged
+          |1 month
+        .slider-programs__prices
+          h3.slider-programs__price 
+            |12 500 ₽ 
+          span 23 040 ₽
+      a.slider-programs__el(href="#") 
+        .slider-programs__img 
+          <picture (js-lazy)>
+            <source media="(min-width:768px)" srcset="../../img/programs-bg-1.jpg">
+            <source media="(max-width:768px)" srcset="../../img/programs-bg-mobile.png">
+            <img class="catalog-img-primary" src="../../img/programs-bg-1.jpg" alt="Agave image 1">
+          </picture>
+        .slider-programs__subtitle PROGRAM
+        h2.slider-programs__title  
+          |Medical examination of a child aged
+          |1 month
+        .slider-programs__prices
+          h3.slider-programs__price 
+            |12 500 ₽ 
+          span 23 040 ₽
+      a.slider-programs__el(href="#") 
+        .slider-programs__img 
+          <picture (js-lazy)>
+            <source media="(min-width:768px)" srcset="../../img/programs-bg-1.jpg">
+            <source media="(max-width:768px)" srcset="../../img/programs-bg-mobile.png">
+            <img class="catalog-img-primary" src="../../img/programs-bg-1.jpg" alt="Agave image 1">
+          </picture>
+        .slider-programs__subtitle PROGRAM
+        h2.slider-programs__title  
+          |Medical examination of a child aged
+          |1 month
+        .slider-programs__prices
+          h3.slider-programs__price 
+            |12 500 ₽ 
+          span 23 040 ₽
+      a.slider-programs__el(href="#") 
+        .slider-programs__img 
+          <picture (js-lazy)>
+            <source media="(min-width:768px)" srcset="../../img/programs-bg-1.jpg">
+            <source media="(max-width:768px)" srcset="../../img/programs-bg-mobile.png">
+            <img class="catalog-img-primary" src="../../img/programs-bg-1.jpg" alt="Agave image 1">
+          </picture>
+        .slider-programs__subtitle PROGRAM
+        h2.slider-programs__title  
+          |Medical examination of a child aged
+          |1 month
+        .slider-programs__prices
+          h3.slider-programs__price 
+            |12 500 ₽ 
+          span 23 040 ₽
+    .navigation-fraction
+      .navigation-fraction__prev
+        svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M1.5 8L8.5 14.9958M1.5 8L8.5 1.00391M1.5 8H30.5' stroke='black')
+      .navigation-fraction__pagination
+      .navigation-fraction__next
+        svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M29.5 7.99976L22.5 1.00391M29.5 7.99976L22.5 14.9959M29.5 7.99976L0.499999 7.99976' stroke='black')
+.page__block
+  .main__slider
+    .main__programs-text 
+      |The experience and extensive practice of the gynecologists of the Verba Clinic
+      |allows us to use modern means for the successful
+      |treatment of a wide variety of gynecological diseases.
+    .main__slider-layout(js-main-slider)
+      .main__slider-wrapper
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+        .main__slider-slide
+          img(src="img/main-slider-1.jpg" alt="verba procedure")
+      .navigation-fraction
+        .navigation-fraction__prev
+          svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M1.5 8L8.5 14.9958M1.5 8L8.5 1.00391M1.5 8H30.5' stroke='black')
+        .navigation-fraction__pagination
+        .navigation-fraction__next
+          svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M29.5 7.99976L22.5 1.00391M29.5 7.99976L22.5 14.9959M29.5 7.99976L0.499999 7.99976' stroke='black')
+
+.page__block
+  a.main__consultation.get-consultation(href="#")
+    p
+      |Sign up for a consultation via
+      span WhatsApp
+.page__block
+  .main__doctors 
+    h2.main__doctors-title.title-primary Our doctors
+    .main__doctors-slider 
+      .doctor-cards-slider(js-doctor-cards-slider)
+        .doctor-cards-slider__wrapper
+          .doctor-cards-slider__item
+            .doctor-cards-slider__img
+              img(src='img/doctorCard-1.png')
+            .doctor-cards-slider__description
+              h3 Badikova Ekaterina
+              h5 Pediatrician
+          .doctor-cards-slider__item
+            .doctor-cards-slider__img
+              img(src='img/doctorCard-1.png')
+            .doctor-cards-slider__description
+              h3 Badikova Ekaterina
+              h5 Pediatrician
+          .doctor-cards-slider__item
+            .doctor-cards-slider__img
+              img(src='img/doctorCard-1.png')
+            .doctor-cards-slider__description
+              h3 Badikova Ekaterina
+              h5 Pediatrician
+          .doctor-cards-slider__item
+            .doctor-cards-slider__img
+              img(src='img/doctorCard-1.png')
+            .doctor-cards-slider__description
+              h3 Badikova Ekaterina
+              h5 Pediatrician
+        .navigation-fraction
+          .navigation-fraction__prev
+            svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M1.5 8L8.5 14.9958M1.5 8L8.5 1.00391M1.5 8H30.5' stroke='black')
+          .navigation-fraction__pagination
+          .navigation-fraction__next
+            svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M29.5 7.99976L22.5 1.00391M29.5 7.99976L22.5 14.9959M29.5 7.99976L0.499999 7.99976' stroke='black')
+.page__block
+  .main__reviews
+    .main__reviews-title.title-primary Reviews about Verba secret
+    .stories-block_reviews(js-reviews-cards-slider)
+      .swiper-wrapper
+        - var i = 0;
+        while i < 4
+          .stories-item.swiper-slide(data-video-src='img/product-1.mp4', data-preview-src='img/reviewPrev1.png')
+            .stories-item__play
+              <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.99979 0.631403L18.9156 9.81779C20.2492 10.5875 20.2492 12.5124 18.9156 13.2821L2.99979 22.4685C1.66646 23.2381 0 22.2758 0 20.7363V2.36358C0 0.824085 1.66645 -0.138181 2.99979 0.631403Z" fill="white"/>
+              </svg>
+            .stories-item-preview
+              img(src='img/reviews1.png')
+            .stories-item-desc
+              h5 Amosova Rose
+          - i++

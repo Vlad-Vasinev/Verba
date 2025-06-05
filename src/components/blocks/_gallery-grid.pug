@@ -1,0 +1,53 @@
+.gallery-grid
+  h2 Все, что нужно для здоровья вашего малыша
+  .gallery-grid__inner(js-gallery-grid-slider)
+    .gallery-grid__wrapper.swiper-wrapper
+      - 
+        var ggPhoto = [
+          {
+            img: 'img/galleryGrid/1.jpg', 
+            t: 'Профессиональное оборудование'
+          },
+          {
+            img: 'img/galleryGrid/2.jpg', 
+            t: 'Лучшее оборудование'
+          },
+          {
+            img: 'img/galleryGrid/3.jpg', 
+            t: 'Врачи с высшим медицинским образованием'
+          },
+          {
+            img: 'img/galleryGrid/4.jpg', 
+            t: 'Приветливый персонал'
+          },
+          {
+            img: 'img/galleryGrid/5.jpg', 
+            t: 'Постоянное внимание и забота специалистов'
+          },
+          {
+            img: 'img/galleryGrid/6.jpg', 
+            t: 'Приятная атмосфера'
+          },
+          {
+            img: 'img/galleryGrid/7.jpg', 
+            t: 'Профессиональный подход'
+          },
+          {
+            img: 'img/galleryGrid/8.png', 
+            t: 'Забота о ребенке'
+          },
+          ];
+      each val, key in ggPhoto
+        .gallery-grid__item
+          .gallery-grid__photo
+            img(src=val.img alt="")
+          .gallery-grid__title
+            h3=val.t
+    .navigation-fraction
+      .navigation-fraction__prev
+        svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M1.5 8L8.5 14.9958M1.5 8L8.5 1.00391M1.5 8H30.5' stroke='black')
+      .navigation-fraction__pagination
+      .navigation-fraction__next
+        svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M29.5 7.99976L22.5 1.00391M29.5 7.99976L22.5 14.9959M29.5 7.99976L0.499999 7.99976' stroke='black')

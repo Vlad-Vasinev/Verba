@@ -1,0 +1,15 @@
+mixin item(file, title)
+  a(href=(file + '.html'))
+    | #{title}
+    b 
+      small=(file)
+
++item('index', 'Index')
++item('services', 'All services')
++item('service-page', 'Service-page')
++item('programs', 'Programs')
++item('programs-page', 'Program')
++item('about', 'About clinic')
++item('contacts', 'Contacts')
++item('policy', 'Policy')
++item('for-patient', 'For patient')

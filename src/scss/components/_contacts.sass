@@ -1,0 +1,313 @@
+.maps-block
+  .maps-block__container
+    display: grid
+    grid-template-columns: 1fr 1fr
+    +aProp(gap, 20)
+    +r($sm)
+      grid-template-columns: 1fr
+      gap: 16px
+       
+  .maps-block__item
+    position: relative
+    &:only-child
+      +rmin($sm1)  
+        grid-column: 1/-1
+        width: 50%
+        justify-self: center
+  .maps-block__desc
+    h2 + h2
+      +aProp(margin-top, 16)
+      +r($sm)
+        margin-top: 16px
+    +r($sm)
+      position: absolute
+      top: 0
+      z-index: 2
+      padding: 16px 
+  .maps-block__map
+      +rmin($sm1)
+        +aProp(margin-top, 30)
+      &:after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        z-index: 1
+        +aProp(border-radius, 24)
+        top: 0
+        pointer-events: none
+        //background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' fill='none' viewBox='0 0 343 372'%3E%3Cg filter='url(%23a)'%3E%3Crect width='380' height='242' x='-124' y='-70' fill='%23F1EBF1' rx='121'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='a' width='780' height='642' x='-324' y='-270' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_4379_4204' stdDeviation='100'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E")
+        background-image: none
+        background-size: 100% 100%
+        background-repeat: no-repeat
+        +rmin($sm1)
+          display: none
+        +r($sm)
+          border-radius: 24px
+  .js-ymap
+    background-color: #f8f8f8
+    +aProp(border-radius, 24)
+    overflow: hidden
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='20' fill='none' stroke='%239B4BA0' stroke-dasharray='31.41592653589793 31.41592653589793' stroke-linecap='round' stroke-width='2'%3E%3CanimateTransform attributeName='transform' dur='2.8571428571428568s' keyTimes='0;1' repeatCount='indefinite' type='rotate' values='0 50 50;360 50 50'/%3E%3C/circle%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-size: 10%
+    background-position: center
+    width: 100%
+    height: auto
+    aspect-ratio: 92/50
+    +r($sm)
+      border-radius: 24px 
+      aspect-ratio: 345/400
+      background-size: 40%
+      //max-height: 343px
+      height: 343px
+    .ymaps3x0--map-copyrights 
+      display: none
+    [class$="controls__control"]
+      +r($sm)
+        left: unset !important
+        right: 4px !important
+    [class$="copyrights-promo"]
+      height: auto
+      > ymaps
+        padding: 0 0 aCalc(30) aCalc(32)
+        display: flex
+        +aProp(gap, 16)
+        +r($sm)
+          gap: 8px
+          flex-direction: column-reverse
+          align-items: flex-start
+          padding: 0 0 16px 16px
+      [class$="gotoymaps"]
+        margin: 0
+        [class$="gotoymaps__container"] 
+          display: flex
+          height: auto
+          padding: aCalc(12) aCalc(16)
+          align-items: center
+          box-shadow: none
+          +aProp(border-radius, 12)
+          +r($sm)
+            border-radius: 12px
+            padding: 8px 12px
+        [class$="gotoymaps__pin"] 
+          +aProp(height, 32)
+          width: auto
+          aspect-ratio: 1
+          background-size: 100%
+          background-size: contain
+          margin: 0
+          +aProp(margin-right, 12)
+          +r($sm)
+            margin-right: 12px
+            height: 24px
+        [class$="gotoymaps__text"]
+          @extend .h4
+          margin: 0
+          height: auto
+      [class$="gototaxi"]
+        margin: 0
+        
+        [class$="gototaxi__container"] 
+          display: flex
+          height: auto
+          padding: aCalc(12) aCalc(16)
+          align-items: center
+          box-shadow: none
+          +aProp(border-radius, 12)
+          +r($sm)
+            border-radius: 12px
+            padding: 8px 12px
+        [class$="gototaxi__pin"] 
+          +aProp(height, 32)
+          width: auto
+          aspect-ratio: 1
+          
+          background-size: contain
+          // background-image: url('../img/yandex-ico.svg')
+          margin: 0
+          +aProp(margin-right, 12)
+          +r($sm)
+            margin-right: 12px
+            height: 24px
+        [class$="gototaxi__text"]
+          @extend .h4
+          margin: 0
+      [class$="gototech"]
+        opacity: 0.2
+        align-self: flex-end
+        +r($sm)
+          order: 1
+          align-self: flex-start
+
+.contacts
+  +r($sm)
+    margin-top: 16px
+  &__wrapper 
+    padding: 0 aCalc(30)
+    +r($sm)
+      padding: 0 15px
+    .maps-block .maps-block__item:only-child
+      width: 100%
+      border-radius: aCalc(40)
+      height: 100%
+      +r($sm)
+        max-height: initial
+    .maps-block .js-ymap
+      border-radius: aCalc(40)
+      max-height: aCalc(500)
+      +r($sm)
+        border-radius: 16px
+        max-height: 343px
+    .maps-block__desc
+      color: #ffffff
+    .ymaps3x0--map 
+      +r($sm)
+        border-radius: 24px
+  .maps-block 
+    .maps-block__subtitle
+      +r($sm)
+        display: none
+  .js-ymap-contacts 
+    height: aCalc(500)
+    margin-top: aCalc(28)
+    canvas
+      height: aCalc(500)
+    +r($sm)
+      margin-top: 0
+      margin-bottom: 0
+      height: 400px
+    .ymaps3x0--map-container
+      border-radius: aCalc(40)
+      +r($sm)
+        border-radius: 24px
+  .maps-block__field
+    font-size: aCalc(30)
+    line-height: aCalc(38)
+    span 
+      display: block
+      margin-bottom: aCalc(14)
+      +r($sm)
+        margin-bottom: 16px
+    +r($sm)
+      font-size: 20px
+      line-height: 24px
+      max-width: 173px
+      position: absolute
+      top: 16px
+      left: 16px
+      z-index: 100
+
+.icon-marker
+  max-width: unset
+  width: 45px
+  object-fit: unset
+  top: 7px
+  height: 67px
+  position: absolute
+  transform: translate(-50%, -100%)
+
+.marker-label-wrapper
+  position: relative
+  width: 120px
+  top: 0
+  left: -10px
+  background-color: transparent
+  text-align: center
+  padding: 6px 8px
+  border-radius: 8px
+  +r($sm)
+    background-color: #ffffff
+.marker-label-title
+  font-weight: 600
+  font-size: 12px
+  line-height: 15px
+  display: none 
+  +r($sm)
+    display: block
+
+.marker-label-text 
+  font-size: 12px
+  line-height: 15px
+  height: 100%
+  bottom: 0
+  left: -100%
+  z-index: 100
+  display: none
+  +r($sm)
+    display: block
+
+.ya-taxi-widget.ya-taxi-widget_size_s
+  position: absolute
+  bottom: aCalc(32)
+  left: aCalc(30)
+  +r($sm)
+    bottom: 16px
+    left: 16px
+  .ya-taxi-widget__info-icon
+    display: none
+.widget_size_s.ya-taxi-widget_theme_normal .ya-taxi-widget__content
+  border-radius: aCalc(12)
+  border: none !important
+  +r($sm)
+    border-radius: 12px !important
+.ya-taxi-widget__content .ya-taxi-widget__content_undefined
+  border-radius: aCalc(12)
+  border: none !important
+  +r($sm)
+    border-radius: 12px !important
+
+
+.ymaps-link-first
+  position: absolute
+  bottom: aCalc(32)
+  left: aCalc(30)
+  max-width: aCalc(261)
+  width: 100%
+  background-color: #ffffff
+  padding: aCalc(12) aCalc(16) aCalc(12) aCalc(60) 
+  background-image: url('../../img/map-arrwo.svg')
+  background-size: 32px 32px
+  background-repeat: no-repeat
+  background-position: aCalc(15) 50%
+  border-radius: aCalc(12)
+  z-index: 100
+  +r($hd)
+    background-size: 20px 20px
+  +r($lg + 2) 
+    background-size: 16px 16px
+  +r($sm)
+    bottom: 16px
+    left: 16px
+    max-width: 225px
+    border-radius: 12px
+    padding: 8px 12px 8px 48px
+    background-position: 8% 50%
+    background-size: 20px 20px
+
+.ymaps-link-second
+  position: absolute
+  left: aCalc(307)
+  bottom: aCalc(32)
+  max-width: aCalc(204)
+  width: 100%
+  background-image: url('../../img/map-taxi.svg')
+  background-size: 32px 32px
+  background-repeat: no-repeat
+  background-position: aCalc(15) 50%
+  background-color: #ffffff
+  padding: aCalc(12) aCalc(16) aCalc(12) aCalc(60) 
+  border-radius: aCalc(12)
+  z-index: 100
+  +r($hd)
+    background-size: 20px 20px
+  +r($lg + 2) 
+    background-size: 16px 16px
+  +r($sm)
+    max-width: 174px
+    left: 16px
+    border-radius: 12px
+    bottom: 64px
+    padding: 8px 12px 8px 48px
+    background-position: 8% 50%
+    background-size: 20px 20px

@@ -1,0 +1,60 @@
+
+.main.main-programs 
+  .reviews-mobile 
+    .main__reviews
+      // +r($sm)
+      //   padding-top: 16px
+      .stories-block_reviews 
+        +r($sm)
+          display: block
+      .swiper-wrapper 
+        +r($sm)
+          justify-content: space-between
+
+.usluga-page-doctors-slider-item.main__doctors-item
+  .fill-button.mob-btn
+    display: none
+    width: 100%
+    +r($sm)
+      display: block
+  +r($sm)
+    background-color: transparent
+    padding: 0
+  .usluga-page-doctors-slider-item-left 
+    +r($sm)
+      flex-direction: column
+    .usluga-page-doctors-slider-item-left-inner
+      +r($sm)
+        padding-left: 0
+        order: 1
+      h3 
+        font-weight: 600
+      .usluga-page-doctors-slider-item-left-rating
+        +r($sm)
+          flex-direction: row
+          align-items: center
+        .stars
+          +r($sm)
+            margin-top: 0
+            margin-left: 10px
+    .mob-image-wrapper 
+      +r($sm)
+        margin: 0 auto
+        width: 100%
+        // width: 343px
+        height: 343px
+        margin-bottom: 16px
+        background-color: #F1EBF1
+        border-radius: 24px
+    .mob-image
+      +r($sm)
+        object-fit: contain
+  .usluga-page-doctors-slider-item-right
+    +r($sm)
+      margin-bottom: 16px
+    .fill-button
+      +r($sm)
+        display: none
+
+.fraction_hidden
+  display: none !important

@@ -1,0 +1,27 @@
+include ../utilities/_mixins
+doctype html
+html(lang="en")
+  head()
+    block head
+      include _head
+
+  //body 
+  body(class=bodyClass)
+
+    //- #barba-wrapper
+    block header
+      include ../../components/header/_header
+
+    .page
+      block content
+
+    block footer
+      include ../../components/footer/_footer
+      include ../../components/modals/_modals
+
+    //- a(href="#section-body").scroll-top
+    //-   +svgMono('arrow-top')
+
+    block scripts
+      include _scripts
+    include _pages-list

@@ -1,0 +1,44 @@
+.switch-block
+  width: 100%
+  display: grid
+  gap: 10px
+  grid-template-columns: 1fr 1fr
+  padding-top: 32px
+  +r($sm)
+    padding-top: 16px
+  .switch-block-option
+    position: relative
+    padding: 16px
+    padding-bottom: 40px
+    padding-right: 50px
+    border-radius: 12px
+    // width: min-content
+    background-color: #FFFFFF
+    border: 1px solid #EBEBEB
+    cursor: pointer
+    transition: background-color 0.2s, border  0.2s
+    white-space: nowrap
+    @extend .h5
+    +r($sm)
+      white-space: normal
+      padding-bottom: 16px
+      // padding: 16px
+    &::after
+      content: ''
+      display: block
+      width: 24px
+      height: 24px
+      position: absolute
+      top: 16px
+      right: 16px
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23EBEBEB'%3E%3C/circle%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-size: 100%
+    &:hover
+      border: 1px solid #BE48B4
+    &.is-active
+      border: 1px solid #BE48B4
+      background-color: #FAE9F8
+      &::after
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23BE48B4'%3E%3C/circle%3E%3Ccircle cx='12' cy='12' r='6' fill='white'%3E%3C/circle%3E%3C/svg%3E")
+    

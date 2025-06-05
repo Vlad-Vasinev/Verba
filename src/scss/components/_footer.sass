@@ -1,0 +1,332 @@
+.footer
+  display: flex
+  flex-direction: column
+  width: 100%
+  +aPadd(60, 30, 60, 30)
+  +r($sm)
+    padding: 60px 16px 40px
+  &.footer_prorgam
+    +r($sm)
+      padding-bottom: 234px
+  
+  .footer__inner
+    display: grid
+    justify-content: center
+    display: flex
+    max-width: aCalc(920)
+    width: 100%
+    margin: 0 auto
+    +rmin($sm1)
+      //grid-template: auto auto / 1fr 0.5fr 0.5fr
+      grid-template-columns: repeat(2, aCalc(450))
+      +aProp(column-gap, 20)
+      +aProp(row-gap, 20)
+    +r($sm)
+      grid-template: auto auto auto / 1fr 1fr
+      gap: 6px
+      max-width: 343px
+      margin: 0 auto
+      max-width: 100%
+      margin: 0 auto
+      justify-content: space-between
+    .footer-map-block
+      //grid-area: 1/1/2/2
+      grid-column-start: 1
+      grid-column-end: 3
+      width: 100%
+      // max-height: aCalc(400)
+      // height: 100%
+      position: relative
+      .js-ymap 
+        height: aCalc(400)
+      img 
+        max-height: aCalc(400)
+        height: 100%
+        +r($sm)
+          min-height: 343px
+          max-width: 343px
+          width: 100%
+      +aProp(border-radius, 24)
+      +r($sm)
+        max-width: 343px
+        margin: 0 auto
+        border-radius: 24px
+        grid-area: -3/ 1 / -2 / -1
+        width: 100%
+      +aProp(border-radius, 24)
+      img
+        position: relative
+        z-index: 0
+        +no-drag
+        +aProp(border-radius, 40)
+        width: 100%
+        +r($sm)
+          border-radius: 24px
+        &.overlay
+          top: 0
+          position: absolute
+          z-index: 1
+      .footer-map-block__address-left, .footer-map-block__address-right
+        z-index: 2
+        background-color: white
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        +aProp(border-radius, 12)
+        text-align: center
+        transition: transform 0.3s
+        
+        h3, .h3
+          font-weight: 600
+        +r($sm)
+          border-radius: 8px
+        &:hover
+          +rmin($sm1)
+            transform: scale(1.05)
+      .footer-map-block__address-left
+        +aProp(width, 176)
+        +aProp(height, 64)
+        +r($sm)
+          width: 176px
+        +aProp(height, 64)
+        +aProp(top, 255)
+        +aProp(left, 92)
+        // 343 / 255.250
+        +r($sm)
+          width: 34.9854%
+          height: 16.454456%
+          top: 48.971596%
+          left: 4.64723%
+      .footer-map-block__address-right
+        +aProp(width, 226)
+        +aProp(height, 64)
+        +r($sm)
+          width: 226px
+        +aProp(height, 64)
+        +aProp(top, 226)
+        +aProp(right, 96)
+        
+        +r($sm)
+          width: 44.606414%
+          height: 16.4544564%
+          top: 37.6101861%
+          right: 4.97376093%
+      .footer-map-block__title-top
+        position: absolute
+        z-index: 2
+        +aProp(top, 30)
+        +aProp(left, 30)
+        +r($sm)
+          top: 30px
+        +aProp(left, 30)
+        +r($sm)
+          z-index: 2
+          top: 16px
+          left: 16px
+        *
+          color: #fff
+      .footer-map-block__title-bottom
+        display: flex
+        position: absolute
+        justify-content: center
+        width: 100%
+        +aProp(bottom, 30)
+        +r($sm)
+          bottom: 30px
+        z-index: 2
+        +r($sm)
+          z-index: 2
+          bottom: 16px
+        *
+          color: #fff
+          text-align: center
+    .footer-link-block
+      @extend .fill-button
+      --x: 22%
+      --y: 25%
+      background: #F1EBF1
+      display: grid
+      min-height: aCalc(450)
+      grid-template-rows: 1fr auto
+      +aProp(padding, 30)
+      +aProp(border-radius, 40)
+      +aProp(border-radius, 40)
+      color: #000
+      width: 100%
+      height: 100%
+      +r($sm)
+        //width: 168px
+        max-width: 100%
+        height: 168px
+        border-radius: 24px
+        padding: 16px
+      &:before
+        background: #EFD5EF
+      &.hovered
+        // color: #fff
+      h2
+        justify-self: start
+      img
+        +aProp(width, 80)
+        +aProp(height, 80)
+        +r($sm)
+          width: 80px
+          height: 80px
+        justify-self: end
+        align-self: end
+        +r($sm)
+          width: 50px
+          height: 50px
+      
+  .footer__bottom
+    max-width: aCalc(280)
+    width: 100%
+    margin: 0 auto
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    grid-column-start: 1
+    grid-column-end: 3
+    display: none 
+    +aProp(margin-top, 60)
+    +aProp(gap, 16)
+    //grid-area: -2/ 1 / -1 / -1
+    +aProp(gap, 16)
+    +r($sm)
+      margin-top: 16px
+      display: flex
+      gap: 8px
+      max-width: 100%
+      flex-direction: column
+      align-items: center
+      order: 2
+    a.policy
+      h4
+        color: #828282
+        +r($sm)
+          text-align: center
+
+        b
+          color: #202020
+          font-weight: normal
+    a.credits
+      h4
+      +rmin($sm)
+        //margin-left: auto
+
+.footer 
+  .ymaps3x0--map
+    +r($sm)
+      border-radius: 24px
+  .footer-map-block
+    margin-bottom: aCalc(20)
+    +r($sm)
+      margin-top: 6px
+      margin-bottom: 0
+      order: 1
+    .maps-block
+      .maps-block__container 
+        +r($sm)
+          display: block
+      .maps-block__map
+        .ymaps-2-1-79-gotoymaps__container, .ymaps-2-1-79-gototaxi__container, .ymaps-2-1-79-gototech, .ymaps-2-1-79-copyright__content
+          display: none
+        position: relative
+      &__title 
+        max-width: aCalc(276)
+        position: absolute
+        // z-index: 100
+        z-index: 99
+        left: aCalc(32)
+        top: aCalc(32)
+        font-size: aCalc(30)
+        line-height: aCalc(38)
+        color: #ffffff
+        +r($sm)
+          left: 16px
+          top: 16px
+          max-width: 187px
+          font-size: 20px
+          line-height: 24px
+      &__subtitle 
+        position: absolute
+        z-index: 100
+        bottom: aCalc(32)
+        left: 0
+        right: 0
+        margin: 0 auto
+        //color: #ffffff
+        max-width: aCalc(403)
+        text-align: center
+        font-size: aCalc(20)
+        font-weight: 600
+        line-height: aCalc(26)
+        +r($sm)
+          bottom: 16px
+          max-width: 203px
+          font-size: 16px
+          line-height: 22px
+      &__field
+        text-align: center
+        position: absolute
+        z-index: 100
+        left: 0
+        right: 0
+        margin: 0 auto
+        border-radius: aCalc(12)
+        bottom: aCalc(133)
+        background-color: #ffffff
+        padding: aCalc(6) aCalc(10)
+        max-width: aCalc(160)
+        width: 100%
+        +r($sm)
+          display: none
+        span 
+          color: #202020
+          font-size: aCalc(20)
+          font-weight: 600
+          line-height: aCalc(26)
+        p
+          display: block 
+          font-size: aCalc(16)
+          line-height: aCalc(24)
+  .maps-block__subtitle
+    color: #ffffff
+    +r($sm)
+      display: block
+
+
+.footer.footer-contact 
+  display: flex
+  flex-direction: row
+  padding-top: aCalc(160)
+  padding-bottom: aCalc(120)
+  +r($sm)
+    flex-direction: column
+    padding-top: 50px
+  .footer__inner 
+    margin: 0
+  .maps-block__container 
+    display: block
+    position: relative
+  .footer-map-block
+    max-width: aCalc(920)
+    width: 100%
+    margin-right: aCalc(20)
+    .js-ymap
+      width: aCalc(920)
+      +r($sm)
+        width: 100%
+    +r($sm)
+      max-width: 100%
+  .maps-block__map
+    margin-top: 0
+    +r($sm)
+      position: relative
+  .maps-block__item
+    position: relative
+    &:only-child
+      +rmin($sm1)  
+        width: 100%

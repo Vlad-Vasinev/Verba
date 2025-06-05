@@ -1,0 +1,245 @@
+@import "inputs"
+@import "fillButton"
+
+body
+  color: $baseTextColor
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+div,
+span
+  color: $baseTextColor
+  font-family: $baseFont
+  margin: 0
+
+div, span
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p
+    display: block
+    
+
+
+h1, .h1, .ph1
+  font-weight: 400
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 50)
+  +aProp(line-height, 58)
+
+  +r($sm1)
+    font-weight: 400
+    font-size: 26px
+    line-height: 34px
+
+h2, .h2, .ph2
+  font-weight: 400
+  font-family: $baseFont
+  color: inherit
+  
+  +aProp(font-size, 30)
+  +aProp(line-height, 36)
+
+  +r($sm1)
+    font-weight: 400
+    font-size: 20px
+    line-height: 24px
+
+h3, .h3, .ph3
+  font-weight: 600
+  font-weight: inherit
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 20)
+  +aProp(line-height, 26)
+
+  +r($sm1)
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+
+h4, .h4, .ph4
+  font-weight: 400
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 18)
+  +aProp(line-height, 26)
+
+  +r($sm1)
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+
+h5, .h5, .ph5
+  font-weight: 400
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 16)
+  +aProp(line-height, 24)
+
+  +r($sm1)
+    font-weight: 400
+    font-size: 14px
+    line-height: 20px
+
+h6, .h6, .ph6
+  font-weight: 400
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 14)
+  +aProp(line-height, 18)
+
+  +r($sm1)
+    font-size: 12px
+    line-height: 16px
+
+button, .button,  .button_medium
+  @extend .h4
+  color: #fff
+  font-weight: 600
+  background: #BE48B4
+  +aPadd(16, 32)
+  +aProp(border-radius, 12)
+  +r($sm)
+    padding: 12px 24px
+    border-radius: 12px
+  &:active
+    transform: scale(.97)
+
+.button_small
+  font-size: 16px
+  line-height: 20px
+  font-weight: 600
+  +aProp(font-size, 16)
+  +aProp(line-height, 20)
+  +aPadd(14, 32)
+  +aProp(border-radius, 12)
+  +r($sm)   
+    border-radius: 12px
+    letter-spacing: 0em
+    padding: 10px 23px
+    font-size: 13px
+    line-height: 18px
+  
+p, li, div
+  @extend .h4
+// Выбор кабинета
+
+.program-filter-switch__item
+  position: relative
+  padding: 24px
+  border-radius: 12px
+  background-color: #FFFFFF
+  border: 1px solid #EBEBEB
+  cursor: pointer
+  transition: background-color 0.2s, border 0.2s
+  +r($sm)
+    padding: 16px
+  .program-filter-switch__type
+  .program-filter-switch__name
+    margin-bottom: 24px
+  .program-filter-switch__count
+    span
+      color: #202020
+      opacity: 0.6
+  .program-filter-switch__checkbox
+    width: 24px
+    height: 24px
+    position: absolute
+    top: 24px
+    right: 24px
+    +r($sm)
+      top: 16px
+      right: 16px
+    circle[fill='#EBEBEB']
+
+    circle[fill='white']
+      visibility: hidden
+      transform-origin: center
+      transition: visibility 0s 0.31s, transform 0.3s 0s
+      transform: scale(0.1)
+  &:hover
+    border: 1px solid #BE48B4
+  &.active
+    border: 1px solid #BE48B4
+    background-color: #FAE9F8
+    .program-filter-switch__checkbox
+      circle[fill='#EBEBEB']
+        fill: #BE48B4
+      circle[fill='white']
+        transition: visibility 0s 0s, transform 0.3s 0.01s
+        transform: scale(1)
+        visibility: visible
+
+// Выбор филиала 
+
+.program-filter-switch__item
+  position: relative
+  padding: 24px
+  border-radius: 12px
+  background-color: #FFFFFF
+  border: 1px solid #EBEBEB
+  cursor: pointer
+  transition: background-color 0.2s, border 0.2s
+  +r($sm)
+    padding: 16px
+  .program-filter-switch__type
+  .program-filter-switch__name
+    margin-bottom: 24px
+  .program-filter-switch__count
+    span
+      color: #202020
+      opacity: 0.6
+  .program-filter-switch__checkbox
+    width: 24px
+    height: 24px
+    position: absolute
+    top: 24px
+    right: 24px
+    +r($sm)
+      top: 16px
+      right: 16px
+    circle[fill='#EBEBEB']
+
+    circle[fill='white']
+      visibility: hidden
+      transform-origin: center
+      transition: visibility 0s 0.31s, transform 0.3s 0s
+      transform: scale(0.1)
+  &:hover
+    border: 1px solid #BE48B4
+  &.active
+    border: 1px solid #BE48B4
+    background-color: #FAE9F8
+    .program-filter-switch__checkbox
+      circle[fill='#EBEBEB']
+        fill: #BE48B4
+      circle[fill='white']
+        transition: visibility 0s 0s, transform 0.3s 0.01s
+        transform: scale(1)
+        visibility: visible
+
+// Выбор подкатегории
+.toggle-tag
+  color: #202020
+  white-space: nowe
+  background-color: #fff
+  border: 1px solid #BE48B4
+  border-radius: 30px
+  padding: 8px 14px
+  font-size: 14px
+  line-height: 19px
+  transition: color 0.2s 0.1s, background-color 0.3s
+  &.active
+    background-color: #BE48B4
+    color: #fff

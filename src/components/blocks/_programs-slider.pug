@@ -1,0 +1,25 @@
+.programs-slider
+  .programs-slider__inner(js-programs-slider)
+    .swiper-wrapper
+      .swiper-slide(href="#") 
+        a.programs-slider__item(href="#")
+          .programs-slider__price
+            h6 Cost of admission
+            h2 2 600 ₽
+          .programs-slider__photo
+            img(src='img/programsSlider2.png')
+          .programs-slider__title 
+            h2 Women's health
+      
+      - var i = 0;
+      while i < 5
+        .swiper-slide(href="#") 
+          a.programs-slider__item(href="#")
+            .programs-slider__price
+              h6 Cost of admission
+              h2 2 600 ₽
+            .programs-slider__photo
+              img(src='img/programsSlider1.png')
+            .programs-slider__title 
+              h2 Women's health
+        - i++

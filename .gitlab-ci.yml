@@ -1,0 +1,11 @@
+stages:
+  - upload
+
+upload-job:
+  stage: upload
+  image: dpolyakov/docker-node-latest-with-rsync:latest
+  only:
+    - dev
+  script:
+    - chmod +x deploy/upload.sh
+    - deploy/upload.sh

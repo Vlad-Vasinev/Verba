@@ -1,0 +1,155 @@
+.page.page-mobile-padd
+  .main 
+    .reviews-mobile 
+      .main__reviews
+        .stories-block_reviews(js-stories-img-slider)
+          .main__mobile
+            - var i = 0;
+            while i < 5
+              .stories-item.swiper-slide(data-video-src='img/waffle.mp4', data-preview-src='img/reviewPrev1.png')
+                .stories-item__play
+                  <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.99979 0.631403L18.9156 9.81779C20.2492 10.5875 20.2492 12.5124 18.9156 13.2821L2.99979 22.4685C1.66646 23.2381 0 22.2758 0 20.7363V2.36358C0 0.824085 1.66645 -0.138181 2.99979 0.631403Z" fill="white"/>
+                  </svg>
+                .stories-item-preview
+                  img(src='img/reviews1.png')
+                .stories-item-desc
+                  h5 Amosova Rose
+              - i++
+  .page__container
+    .page__block
+      .page__heading  
+        h1 For patients
+        .patient-block 
+          .accordeon-el
+            .accordeon-el__head
+              .accordeon-el__name.h2 Patients' rights
+              .accordeon-el__icon 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L14 17.5M19 12L14 6.5" stroke="#BE48B4" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            .accordeon-el__body
+              .accordeon-el__block
+                .h3 Dignified and respectful attitude of employees
+                - var i = 0;
+                while i < 2
+                  .h4 
+                    |As our patient, regardless of age, gender, race, religion, nationality or any special needs, you will receive comprehensive and professional medical care. Our staff will treat you with respect, attention, a desire to help and find the best solution to your problem.
+                  - i++
+              .accordeon-el__block
+                .h3 Convenient access to any information related to treatment
+                - var i = 0;
+                while i < 3
+                  .h4 
+                    |The care received by the patient must be provided by competent specialists
+                    |in the proper volume, according to medical standards. The care provided must be
+                    |timely and complete.
+                  - i++
+                a(href="#" target="_blank").btnm All medical records are kept in a safe and secure location.
+              .accordeon-el__block
+                .h3 Timely and complete response to inquiries addressed to "Verba Clinic"
+                .h4 
+                  |The patient has the right to leave a request to the Verba Clinic, including a complaint, using any of the communication channels used in the clinic. The patient has the right to have his question considered on the merits and to receive an answer.
+                  |All requests will be considered in accordance with the procedures adopted in the clinic, within the established time frame.
+                .h5 * The list of specified patient rights is not exhaustive; other patient rights are provided for within the framework of concluded agreements.
+              .accordeon-el__block
+                .h3 To register an adult, you must take with you:
+                ul.accordeon-el__list
+                  - var i = 0;
+                  while i < 2
+                    li.h4-secondary Passport
+                    - i++
+                  - var ki = 0;
+                  while ki < 2
+                    li.h4-secondary Applying inscriptions and posting announcements, posters and other informational or advertising materials without written permission from the clinic management
+                    - ki++
+          .accordeon-el
+            .accordeon-el__head
+              .accordeon-el__name.h2 Responsibilities of patients and clinic visitors
+              .accordeon-el__icon 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L14 17.5M19 12L14 6.5" stroke="#BE48B4" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            .accordeon-el__body
+              .accordeon-el__block
+                .h3 Providing up-to-date information about yourself
+                - var i = 0;
+                while i < 2
+                  .h4 
+                    |To organize proper identification of patients and communication with them,
+                    |Verba Clinic asks patients to promptly update their passport
+                    |and contact information in case of their change
+                  - i++
+              .accordeon-el__block
+                .h3 Convenient access to any information related to treatment
+                - var i = 0;
+                while i < 3
+                  .h4 
+                    |To organize proper identification of patients and communication with them,
+                    |Verba Clinic asks patients to promptly update their passport
+                    |and contact information in case of their change
+                  - i++
+                a(href="#" target="_blank").btnm For your first visit to the clinic, please arrive 10 minutes in advance and contact the administrator to complete the paperwork.
+              .accordeon-el__block
+                .h3 Timely and complete response to inquiries addressed to "Verba Clinic"
+                .h4 
+                  |The patient has the right to leave a request to the Verba Clinic, including a complaint, using any of the communication channels used in the clinic. The patient has the right to have his question considered on the merits and to receive an answer.
+                  |All requests will be considered in accordance with the procedures adopted in the clinic, within the established time frame.
+                .h5 * The list of specified patient rights is not exhaustive; other patient rights are provided for within the framework of concluded agreements.
+              .accordeon-el__block
+                .h3 To register a child under 15 years of age:
+                ul.accordeon-el__list
+                  - var i = 0;
+                  while i < 2
+                    li.h4-secondary Voluntary medical insurance policy (if available)
+                    - i++
+                  - var ki = 0;
+                  while ki < 2
+                    li.h4-secondary If a child is NOT accompanied by an official representative at the clinic, a notarized power of attorney for this person is required.
+                    - ki++
+          .accordeon-el
+            .accordeon-el__head
+              .accordeon-el__name.h2 Legal information
+              .accordeon-el__icon 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L14 17.5M19 12L14 6.5" stroke="#BE48B4" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            .accordeon-el__body
+              .accordeon-el__block
+                .h3 Legislative documents:
+                - var i = 0;
+                while i < 2
+                  .h4 
+                    | <span>Important! </span> Federal Law on the Fundamentals of Health Protection
+                    |citizens in the Russian Federation - <a class="btnm" href="#"> «Law No. 323-FZ» </a>
+                  - i++
+                a(href="#" target="_blank").btnm On your first visit to the clinic, you must
+                a(href="#" target="_blank").btnm Blood tests
+                a(href="#" target="_blank").btnm Urine tests
+              .accordeon-el__block
+                .h3 Convenient access to any information related to treatment
+                - var i = 0;
+                while i < 3
+                  .h4 
+                    |To organize proper identification of patients and communication with them,
+                    |Verba Clinic asks patients to promptly update their passport
+                    |and contact information in case of their change
+                  - i++
+                a(href="#" target="_blank").btnm For your first visit to the clinic, please arrive 10 minutes in advance and contact the administrator to complete the paperwork.
+              .accordeon-el__block
+                .h3 Timely and complete response to inquiries addressed to "Verba Clinic"
+                .h4 
+                  |The patient has the right to leave a request to the Verba Clinic, including a complaint, using any of the communication channels used in the clinic. The patient has the right to have his question considered on the merits and to receive an answer.
+                  |All requests will be considered in accordance with the procedures adopted in the clinic, within the established time frame.
+                .h5 * The list of specified patient rights is not exhaustive; other patient rights are provided for within the framework of concluded agreements.
+              .accordeon-el__block
+                .h3 To register a child under 15 years of age:
+                ul.accordeon-el__list
+                  - var i = 0;
+                  while i < 2
+                    li.h4-secondary Voluntary medical insurance policy (if available)
+                    - i++
+                  - var ki = 0;
+                  while ki < 2
+                    li.h4-secondary If a child is NOT accompanied by an official representative at the clinic, a notarized power of attorney for this person is required.
+                    - ki++

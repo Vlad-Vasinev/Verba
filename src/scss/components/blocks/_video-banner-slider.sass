@@ -1,0 +1,120 @@
+.video-banner-slider
+  position: relative
+  cursor: pointer
+  +r($sm)
+    margin: 0 -16px
+  .video-banner-slider__tag
+    background-color: #fff
+    z-index: 3
+    position: absolute
+    +aProp(top, 30)
+    +aProp(left, 30)
+    +r($sm)
+      top: 30px
+      left: 30px
+    padding: 12px 24px
+    +aProp(border-radius, 12)
+    font-weight: 600
+    +r($sm)
+      border-radius: 12px
+      top: 16px
+      left: 16px
+      padding: 10px 24px
+      border-radius: 12px
+  .swiper-wrapper
+  .video-banner-slider__slide
+    @extend .swiper-slide
+    width: 100%
+    height: auto
+    aspect-ratio: 1860/850
+    +r($sm)
+      width: 100vw
+      height: 480px
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      background-color: rgba(255, 255, 255, 0.2)
+      +aProp(width, 128)
+      +aProp(height, 128)
+      +r($sm)
+        width: 128px
+        height: 128px
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      transition: transform 0.3s
+      +aProp(border-radius, 64)
+      +r($sm)
+        border-radius: 64px
+      z-index: 3
+      backdrop-filter: blur(7.5px)
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 50 50'%3E%3Cpath fill='%23fff' d='m6.74 2.12 36.43 20.7a2.5 2.5 0 0 1 0 4.35L6.74 47.87A2.5 2.5 0 0 1 3 45.7V4.3a2.5 2.5 0 0 1 3.74-2.18Z'/%3E%3C/svg%3E")
+      +aProp(background-size, 50)
+      +r($sm)
+        background-size: 50px
+      background-repeat: no-repeat
+      background-position: center
+      +r($sm)
+        width: 72px
+        height: 72px
+        background-size: 25px
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      background: #2B0638
+      opacity: 0.6
+      width: 100%
+      height: 100%
+      top: 0
+      +aProp(border-radius, 40)
+      +r($sm)
+        border-radius: 40px
+      z-index: 2
+  .video-banner-slider__video
+    width: 100%
+    height: 100%
+    img, video, iframe
+      position: absolute
+      +aProp(border-radius, 40)
+      width: 100%
+      height: 100%
+      object-fit: cover
+      z-index: 1
+      +r($sm)
+        border-radius: 40px
+    video
+      z-index: 2
+    //   opacity: 0.001
+    //   transition: opacity 0.2s
+    //   &._loaded
+    //     opacity: 1
+  .video-banner-slider__desc
+    position: absolute
+    +aProp(bottom, 100)
+    +aProp(left, 30)
+    z-index: 3
+    color: #fff
+    +r($sm)
+      bottom: 100px
+      left: 30px
+      width: 100%
+      padding: 0 16px 56px 16px
+      bottom: 0
+      left: 0
+    
+    .h1
+      +aProp(margin-bottom, 30)
+      +r($sm)
+        margin-bottom: 30px
+      +r($sm)
+        margin-bottom: 16px
+    .h3
+      +aProp(max-width, 521)
+      +r($sm)
+        max-width: 521px
+  &:hover
+    .video-banner-slider__slide
+      &::before
+        transform: translate(-50%, -50%) scale(1.1)

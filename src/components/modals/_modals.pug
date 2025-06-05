@@ -1,0 +1,49 @@
+.modal(data-modal-name="video-banner")
+  .modal__inner
+    .modal__top
+      span Start a project
+      svg.modal__close-button(js-modal-close width='57' height='57' viewBox='0 0 57 57' fill='none' xmlns='http://www.w3.org/2000/svg')
+        circle(cx='28.5' cy='28.5' r='28.5' fill='#fff')
+        path(d='M19 39L39 19' stroke='black' stroke-width='2' stroke-linecap='round')
+        path(d='M19 19L39 39' stroke='black' stroke-width='2' stroke-linecap='round')
+    .modal__body
+      //- <iframe width="560" height="315" src="https://www.youtube.com/embed/ewf-8rx9_uQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+.modal(data-modal-name="appoint-form")
+  .modal__inner
+    .modal__top
+      span Make an appointment
+      svg.modal__close-button(js-modal-close width='57' height='57' viewBox='0 0 57 57' fill='none' xmlns='http://www.w3.org/2000/svg')
+        circle(cx='28.5' cy='28.5' r='28.5' fill='#fff')
+        path(d='M19 39L39 19' stroke='black' stroke-width='2' stroke-linecap='round')
+        path(d='M19 19L39 39' stroke='black' stroke-width='2' stroke-linecap='round')
+    .modal__body
+      form#appoint-form.form-request(action="/local/ajax/forms.php")
+        input(type="hidden" name="MORE" value="")
+        input(type="hidden" name="URL" value="")
+        input(type="hidden" name="WHICH_FORM" value="")
+        .ui-input(js-input-focus)
+          label.ui-input__float-label(for="usluga-modal-name-p") Your name:
+          input(type="text" name="NAME" id="usluga-modal-name-p" required)
+          
+        .ui-input(js-input-focus)
+          label.ui-input__float-label(for="usluga-modal-phoneNumber")  Your phone:
+          input(type="tel" name="PHONE" id="usluga-modal-phoneNumber")
+          
+        .g-recaptcha(id="recaptcha7" data-sitekey="6LdA9JseAAAAADFzWcsSaXOVX5YkFaM5Qb0hyjMb" data-size="invisible")
+        //- .error-field
+        button.fill-button(type="submit") Send
+        p.form-policy By clicking on the button you agree to the terms of the <a>privacy policy</a> and <a>processing of personal data</a>
+      .form-response Thank you for your application. We will study all the data and contact you.
+
+template#modal-template
+  .modal
+    .modal__inner
+      .modal__top
+        span 
+        svg.modal__close-button(js-modal-close width='57' height='57' viewBox='0 0 57 57' fill='none' xmlns='http://www.w3.org/2000/svg')
+          circle(cx='28.5' cy='28.5' r='28.5' fill='#fff')
+          path(d='M19 39L39 19' stroke='black' stroke-width='2' stroke-linecap='round')
+          path(d='M19 19L39 39' stroke='black' stroke-width='2' stroke-linecap='round')
+      .modal__body
+
+.modal-background.fixed-block(js-modal-close)

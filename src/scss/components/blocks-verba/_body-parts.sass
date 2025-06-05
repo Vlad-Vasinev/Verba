@@ -1,0 +1,42 @@
+.body-parts-block
+  .body-parts-block__container
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 16px
+    +r($sm)
+      grid-template-columns: 1fr
+    // justify-content: space-between
+    .body-parts-item
+      border: 1px solid #EBEBEB
+      padding: 24px
+      border-radius: 24px
+      display: flex
+      flex-direction: column
+      align-items: center
+      .body-parts-item__name 
+        margin-bottom: 16px
+      .body-parts-item__img 
+        margin-bottom: 16px
+        height: 140px
+        width: auto
+        img 
+          height: 100%
+          width: auto
+      .body-parts-item__list
+        display: flex
+        flex-direction: column
+        align-items: center
+        
+        gap: 4px
+        margin-top: auto
+        
+        a
+          // padding-bottom: 1px
+          border-bottom: 1px solid #be48b400
+          // border-color: #0000
+          transition: border-color 0.15s
+          & > *
+            transition: color 0.15s
+          &:hover
+            border-color: #be48b4ff
+            color: #be48b4

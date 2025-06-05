@@ -1,0 +1,726 @@
+body
+  +aProp(--header-height, 142)
+  +r($sm)
+    --header-height: 70px
+.header-top
+  display: none
+  position: relative
+  background-color: #ffffff
+  //z-index: 191
+  z-index: 192
+  position: fixed
+  top: 0
+  width: 100%
+  &__order 
+    margin-left: auto
+    max-width: 130px
+    width: 100%
+    font-size: 13px
+    font-style: normal
+    font-weight: 600
+    line-height: 20px
+    border-radius: 24px
+    text-transform: uppercase
+    color: #ffffff !important
+    padding: 24px 16px
+    background-color: #BE48B4
+  &__burger 
+    display: grid
+    justify-content: center
+    align-content: center
+    background-color: #F1EBF1
+    border-radius: 24px
+    width: 68px 
+    height: 68px
+    svg 
+      display: none
+    div z
+      height: 2px
+      background-color: #000000
+      width: 20px
+    div + div 
+      margin-top: 4px
+  .header-top___burger_active
+    display: block
+  .header-top___burger_inactive
+    display: none
+  +r($sm)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 16px
+
+    img
+      width: 116px
+      height: 56px
+      object-fit: contain
+    // *
+    //   color: #A4A4A4
+.header
+  +rmin($sm1)
+    position: sticky
+    top: 0
+    z-index: map-get($zindex, header)
+    width: 100%
+  +r($sm)
+    border-top: 1px solid #e5e5e5
+    position: sticky
+    top: -1px
+    transition: transform .4s ease
+    z-index: map-get($zindex, header)
+    &._stiked
+      border-top: 2px solid #e5e5e5
+    &._is-fixed
+      --translate: -65px
+      transform: translateY(var(--translate))
+  &__consultation 
+    margin-top: 42px
+    background-color: #58BE55
+    max-width: 100%
+  &__info 
+    margin-top: 24px
+    text-align: center
+    font-size: 16px
+    font-weight: 600
+    line-height: 22px
+    color: #202020
+  .header__inner
+    .header__logo-mobile
+      display: none
+    +rmin($sm1)
+      display: grid
+      grid-template-columns: 1fr 2fr 1fr
+      width: 100%
+      +aPadd(20, 30)
+      padding-bottom: 0
+      //align-items: center
+      align-items: flex-start
+      position: absolute
+      // transition: padding 0.2s
+      // transition: padding 0s
+    +r($sm)
+      width: 100%
+      z-index: 1000
+      transition: height 0.5s ease
+  &__inner.header__contact 
+    align-items: center
+    .policy 
+      display: flex
+      max-width: 97%
+      justify-content: space-between
+      bottom: aCalc(30)
+      &__top 
+        display: flex
+        align-items: center
+        span 
+          margin: 0 aCalc(6)
+        &-info 
+          span
+            margin-left: aCalc(6)
+            margin-right: aCalc(32)
+      +r($sm)
+        display: none
+    .social-icon
+      display: none
+  &._extra-padding
+    .header__inner
+      +aPadd(20, 50)
+  .social-icon 
+    position: fixed
+    right: aCalc(30)
+    bottom: aCalc(30)
+    +r($sm)
+      display: none
+    svg 
+      width: aCalc(56)
+      height: aCalc(56)
+  .policy 
+    max-width: aCalc(283)
+    width: 100%
+    position: fixed
+    left: aCalc(30)
+    bottom: aCalc(30)
+    +r($sm)
+      display: none
+    &__top 
+      margin-bottom: aCalc(16)
+      font-size: aCalc(14)
+      line-height: aCalc(18)
+      color: #202020
+      span 
+        margin-leыft: aCalc(5)
+        color: #828282
+      &-info
+        color: #202020
+        margin-top: aCalc(4)
+        span 
+          color: #202020
+  .header__links
+    position: fixed
+    top: aCalc(10)
+    left: aCalc(30)
+    max-width: aCalc(300)
+    width: 100%
+    background-color: #F1EBF1
+    backdrop-filter: blur(7.5px)
+    border-radius: aCalc(24)
+    padding: aCalc(20) aCalc(24) aCalc(24)
+    +r($sm)
+      display: none
+    .header__logo
+      +aProp(width, 124)
+      height: auto
+      justify-self: flex-start
+      +r($sm)
+        width: 141px
+      img, object, svg
+        //width: 100%
+        //height: auto
+        width: auto
+        height: aCalc(60)
+      .svg-logo
+        *
+          transition: fill 0.3s
+        .svg-logo__title
+          fill: #000
+        .svg-logo__subtitle
+          fill: #9B4BA0
+      +r($sm)
+        //display: none
+  .header__links-menu
+    margin-top: aCalc(40)
+    margin-bottom: aCalc(24)
+    display: flex
+    flex-direction: column
+    a 
+      transition: transform 0.3s ease,-webkit-transform 0.3s ease, padding 0.3s ease
+      position: relative
+      &::before 
+        position: absolute
+        content: ""
+        left: aCalc(-5)
+        top: 50%
+        transform: translateY(-50%) scale(0)
+        //transform: scale(0)
+        width: aCalc(6)
+        height: aCalc(6)
+        border-radius: 50%
+        background-color: #BE48B4
+        transition: transform 0.3s ease,-webkit-transform 0.3s ease
+      &:hover 
+        padding-left: aCalc(5)
+        transform: translateX(aCalc(10))
+        &::before
+          //left: aCalc(-5)
+          transform: translateY(-50%) scale(1)
+    a + a 
+      padding-top: aCalc(6)
+      &::before 
+        top: 60%
+  .header__links-all
+    font-size: aCalc(18)
+    line-height: aCalc(26)
+    color:#BE48B4
+    padding-right: aCalc(32)
+    transition: padding 1.3s cubic-bezier(.22,1,.36,1),-webkit-padding 1.3s cubic-bezier(.22,1,.36,1)
+    position: relative
+    cursor: pointer
+    &:hover 
+      padding-right: aCalc(24)
+    &::after 
+      right: 0
+      position: absolute
+      content: ""
+      background-image: url('../../img/arrow-header.svg')
+      width: aCalc(24)
+      height: aCalc(24)
+      background-size: cover
+      background-repeat: no-repeat
+  .header__reviews 
+    //margin-left: auto
+    width: 100%
+    max-width: max-content
+    position: absolute
+    right: 0
+    top: aCalc(-13)
+    
+    .main__reviews
+      .stories-item-desc
+        display: none
+      .stories-item-preview 
+        max-height: aCalc(92)
+        box-sizing: content-box
+        padding: 0
+        border: 1px solid #ffffff
+        border-radius: 50%
+        +r($sm)
+          max-height: 58px
+      .stories-block_reviews
+        display: flex
+        .swiper-wrapper 
+          justify-content: flex-end
+          min-height: aCalc(94)
+      .stories-item
+        position: relative
+        transition: transform 0.3s ease, visibility 0.7s ease, opacity 0.7s ease
+        max-width: aCalc(92)
+        width: 100%
+        min-width: aCalc(92)
+        min-height: aCalc(92)
+        max-height: aCalc(92)
+        height: 100%
+        z-index: calc(5 - var(--index-story))
+        // visibility: hidden
+        // opacity: 0
+        //transform: translateX(0)
+        transform: translateX(  calc(var(--index-reverse) * 100%) )
+        img 
+          width: aCalc(92)
+          height: aCalc(92)
+          min-width: aCalc(92)
+          min-height: aCalc(92)
+          border-radius: 50%
+      .stories-item_active 
+        transform: translateX(0)
+      .stories-item:hover 
+        transform: translateX(  calc(var(--index-reverse) * 98%) )
+      .stories-item:hover ~ .stories-item
+        transform: translateX(  calc(var(--index-reverse) * 98%) )
+      
+      .stories-item:last-child 
+        position: relative
+        &::before 
+          width: aCalc(22)
+          height: aCalc(25)
+          top: 50%
+          transform: translateY(-50%)
+          left: 0
+          right: 0
+          margin: 0 auto
+          position: absolute
+          content: ""
+          //-!
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='23' fill='none' viewBox='0 0 20 23'%3E%3Cpath fill='%23fff' d='m2.9998.6314 15.9158 9.1864c1.3336.7697 1.3336 2.6946 0 3.4643L2.9998 22.4685C1.6665 23.2381 0 22.2758 0 20.7363V2.3636C0 .824 1.6664-.1382 2.9998.6314Z'/%3E%3C/svg%3E")
+          background-size: cover
+          background-repeat: no-repeat
+          z-index: 10
+          +r($sm)
+            width: 14px
+            height: 16px
+      .stories-block_reviews
+        .swiper-wrapper
+          flex-direction: row-reverse
+          .stories-item
+            margin-right: -64px 
+            transition: margin 0.3s ease
+            &:hover 
+              margin-right: -54px 
+            
+
+  .header__mobile-title
+    display: none
+    +r($sm)
+      display: block
+  &__menu.header__contact 
+    justify-content: center
+  .header__menu
+    position: relative
+    &-social 
+      display: flex
+      justify-content: flex-start
+      max-width: max-content
+      flex-shrink: 0
+      flex-grow: 4
+      position: relative
+      z-index: 100
+      a + a 
+        margin-left: aCalc(8)
+        +r($sm)
+    +rmin($sm1)
+      grid-area: 1/2/1/3
+      justify-self: normal
+      display: flex
+      align-items: center
+      +aProp(gap, 8)
+    +r($sm)
+      display: none
+      grid-template-columns: auto auto 1fr auto
+      align-items: center
+      border-bottom: 1px solid #e5e5e5
+      gap: 0
+      height: 69px
+      position: relative
+      bottom: 0
+      width: 100%
+      max-width: 100vw
+      overflow: hidden
+      z-index: 1
+      position: sticky
+      bottom: 0
+      background-color: #fff
+    &._sidebar-active
+      .header__menu-button_mobile
+        visibility: hidden
+        opacity: 0
+        transition: visibility .25s 0s ease, opacity .25s ease
+      .header__sidebar-back
+        transform: translateX(0)
+
+  .header__sidebar-back, .header__burger
+    +aProp(height, 68)
+    background-color: #fff
+    aspect-ratio: 1
+    width: auto
+    +aPadd(18, 0)
+    +r($sm)
+      padding: 18px 0
+      height: 68px
+  &-sidebar__back
+    background-color: transparent
+    color: #202020
+    font-size: 16px
+    line-height: 24px
+    position: relative
+    &::before 
+      position: absolute
+      content: ""
+      left: 0
+      background-image: url('../../img/arrow-prev.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      width: 24px 
+      height: 24px
+  .header__sidebar-back
+    grid-area: 1 / 1 / 2 / -2
+    border-right: 1px solid #e5e5e5
+    position: absolute
+    z-index: 3
+    left: 0
+    transform: translateX(-100%)
+    transition: transform .4s ease
+    +rmin($sm1)
+      display: none
+    svg
+      opacity: 0.2
+      margin: auto
+      +aProp(width, 32)
+      +aProp(height, 32)
+      transition: opacity 0.2s ease
+      +r($sm)
+        width: 32px
+        height: 32px
+    &._active
+      svg
+        opacity: 1
+
+  .header__burger
+    border-left: 1px solid #e5e5e5
+    grid-area: 1 / -2 / 2 / -1
+    +rmin($sm1)
+      display: none
+    svg
+      margin: auto
+      +aProp(width, 32)
+      +aProp(height, 32)
+      +r($sm)
+        width: 32px
+        height: 32px
+      rect
+        transform-origin: center
+        &:nth-child(1)
+          transition: transform 0.15s 0.14s ease, opacity 0.15s ease
+        &:nth-child(2)
+          transition-duration: 0.15s
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+        &:nth-child(3)
+          transition: transform 0.15s 0.14s ease, transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    &._active svg
+      rect
+        &:nth-child(1)
+          opacity: 0
+          // y: 15
+          transform: translateY(28.125%)
+          transition: transform 0.15s ease, opacity 0.15s 0.14s ease
+        &:nth-child(2)
+          transform: rotate(45deg)
+          transition-delay: 0.14s
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+        &:nth-child(3)
+          // y: 15
+          transform: rotate(-45deg) translateY(-28.125%)
+          transition: transform 0.15s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+  .header__menu-button
+    +rmin($sm1)
+      font-weight: 400
+      backdrop-filter: blur(7px)
+      +aProp(border-radius, 24)
+    span
+      display: block
+      padding: aCalc(12) aCalc(16)
+      background: rgba(216, 216, 216, 0.2)
+
+    +r($sm)
+      display: none
+  .header__dropdown-menu
+    display: none
+    color: #000
+    +aProp(padding-top, 8)
+    visibility: hidden
+    transform: translateY(-5%)
+    opacity: 0
+    transition: visibility 0s 0.51s, opacity 0.3s 0.2s, transform 0.3s 0.2s
+    z-index: map-get($zindex, header) - 1
+    position: absolute
+    +r($sm)
+      display: none
+    .header__dropdown-inner
+      width: max-content
+      +aProp(border-radius, 24)
+      background: #F7F7F7
+      display: flex
+      flex-direction: column
+      padding: aCalc(12) aCalc(16)
+      a
+        transition: color 0.2s
+        &:hover
+          color: #BE48B4
+      a + a
+        +aProp(padding-top, 8)
+  .header__menu-button.header__menu-button_dropdown
+    &:hover
+      .header__dropdown-menu
+        visibility: visible
+        transform: translateY(0)
+        opacity: 1
+        transition: visibility 0s 0s, opacity 0.3s 0.14s, transform 0.3s 0.14s
+  &._inited
+    .header__dropdown-menu
+      display: block
+
+  .header__menu-button_mobile
+    display: none
+    +r($sm)
+      display: flex
+      align-items: center
+      gap: 6px
+      padding: 4px
+      padding-right: 10px
+      border-radius: 24px
+      width: max-content
+      margin-left: 16px
+      transition: visibility 0s 0s ease, opacity .25s .05s ease
+      opacity: 1
+    &._pink
+      background-color: #BE48B4
+      color: #fff
+    &._gray
+      background-color: #F2F2F2
+      color: #202020
+      height: min-content
+    img
+      +aProp(height, 30)
+      +aProp(width, 30)
+      +r($sm)
+        height: 30px
+        width: auto
+      +aProp(width, 30)
+    & + .header__menu-button_mobile
+      +aProp(margin-left, 6)
+      +r($sm)
+        margin-left: 6px
+  .header__appoint-button
+    +rmin($sm1)
+      grid-area: 1/3/1/4
+      justify-self: flex-end
+      +aProp(width, 300)
+      +aProp(padding, 20)
+      display: flex
+      background: #9B4BA0
+      +aProp(border-radius, 24)
+      justify-content: space-between
+      text-align: left
+      color: #fff
+      svg
+        +aProp(width, 52)
+        height: auto
+    +r($sm)
+      display: none
+  &._white
+    .header__logo .svg-logo
+      // display: none
+      .svg-logo__title
+        fill: #fff
+      .svg-logo__subtitle
+        fill: #fff
+    .header__menu .header__menu-button
+      color: #fff
+
+.body_active 
+  opacity: 0.4
+  background-color:#000000
+// .header-sidebar.header-sidebar_active
+//   z-index: 191
+.header-sidebar
+  display: none
+  border-bottom-left-radius: 24px
+  border-bottom-right-radius: 24px
+  +r($sm)
+    max-height: 80vh
+    display: block
+    position: fixed
+    left: 0
+    top: calc(var(--header-height) + 10px)
+    width: 100vw
+    transform: translateX(0) 
+    height: calc(100vh - var(--header-height) + 0px)
+    height: calc(100dvh - var(--header-height) + 0px)
+    transition: transform .35s ease visibility .35s ease
+    z-index: 191
+    visibility: hidden
+    &._opened
+      transform: translateX(0%)
+      visibility: visible
+      //z-index: 191
+  > button
+    position: absolute
+    z-index: 2
+    bottom: 0
+      /* width: calc(100% - 32px); */
+    left: 16px
+    right: 16px
+    bottom: 40px
+  .header-sidebar__step
+    padding: 30px 24px
+    background-color: #ffffff
+    width: 100%
+    height: auto
+    position: absolute
+    border-bottom-left-radius: 24px
+    border-bottom-right-radius: 24px
+    z-index: 100000
+    transition: transform 0.4s, visibility 0.4s, -webkit-transform 0.4s, background 0.4s
+    //padding: 30px 8px
+    &[data-step-name]
+      //visibility: hidden
+      //z-index: -1
+      // transition: transform 0.4s, visibility 0.4s, opacity 0.4s, -webkit-transform 0.4s, background 0.4s
+      transform: translateY(-100%) translateX(0)
+      &._active
+        transform: translateY(0) translateX(0)
+        //background: #ffffff
+        //transition: transform 0.4s, visibility 0.4s, opacity 0.4s, -webkit-transform 0.4s, background 0.4s
+        //visibility: visible
+        //z-index: 1 
+        border-bottom-left-radius: 24px
+        border-bottom-right-radius: 24px
+    .header-sidebar__row
+      display: block
+      & + .header-sidebar__row
+        +r($sm)
+          margin-top: 16px
+    .header-sidebar__grid 
+      display: grid 
+      grid-gap: 4px 6px
+      justify-content: center
+      grid-template-columns: repeat(3, 117px)
+      .header-sidebar__el:first-child 
+        background-color: #F1EBF1
+      .header-sidebar__el:first-child.header-sidebar__back
+        &::before 
+          display: none
+      .header-sidebar__el 
+        border-radius: 12px
+        padding: 12px 2px
+        border: 1px solid #F1EBF1
+        max-width: 117px 
+        display: grid 
+        justify-content: center
+        align-items: center
+        text-align: center
+        img, svg
+          margin: 0 auto 8px
+        p 
+          font-size: 12px
+          line-height: 16px
+  // .header-sidebar__step._active 
+  //   border-bottom-left-radius: 24px
+  //   border-bottom-right-radius: 24px
+
+.slide-button
+  cursor: pointer
+  .slide-button-inner
+    position: relative
+    overflow: hidden
+    span
+      display: block
+      position: relative
+      transform: translateY(0)
+      transition: transform 0.4s 0.05s, color 0.3s
+      &:nth-child(2)
+        position: absolute
+  &:hover
+    +rmin($sm1)
+      .slide-button-inner
+        span
+          transform: translateY(-100%)
+          &:nth-child(2)
+            position: absolute
+
+.header
+  .header__menu-button.slide-button, .header__menu-button > .slide-button
+    // backdrop-filter: blur(7px)
+    +rmin($sm1)
+      background: none
+      padding: 0
+      +aProp(border-radius, 24)
+      overflow: hidden
+      -webkit-mask-image: -webkit-radial-gradient(white, black)
+      .slide-button-inner span
+        padding: aCalc(12) aCalc(16)
+        background: rgba(216, 216, 216, 0.2)
+        &:nth-child(2)
+          position: absolute
+          background: rgb(190, 72, 180)
+          color: #fff
+  .header__menu-button
+    &:hover
+      & > .slide-button
+        +rmin($sm1)
+          .slide-button-inner
+            span
+              transform: translateY(-100%)
+              &:nth-child(2)
+                position: absolute
+
+
+.burger-item
+  transition: all .4s
+  position: relative
+  height: 2px
+  background-color: #202020
+  width: 20px
+
+.burger-item + .burger-item 
+  margin-top: 4px
+
+.burger-first.burger-item_active
+  top: 5px
+  //transform: rotate(45deg) translateY(3px) translateX(5px)
+  transform: rotate(45deg)
+
+.burger-second.burger-item_active
+  visibility: hidden
+  opacity: 0
+
+.burger-third.burger-item_active
+  bottom: 7px
+  transform: rotate(-45deg) 
+//translate(3px, -2px)
+.burger-item_active 
+
+
+.header-sidebar 
+  .main__consultation 
+    +r($sm)
+      margin-top: 42px !important

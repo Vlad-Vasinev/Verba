@@ -1,0 +1,33 @@
+.navigation-fraction
+  justify-content: center
+  position: static
+  +aProp(margin-top, 16)
+  +rmin($sm1)
+    display: none
+  +r($sm)
+    display: flex
+    margin-top: 0
+    min-height: 24px
+  //   position: relative
+  //   z-index: 1000
+  //   top: 118px
+  // +r($ms + 7)
+  //     top: 86px
+  .navigation-fraction__prev, .navigation-fraction__next
+    display: flex
+    align-items: center
+    cursor: pointer
+    svg
+      +aProp(height, 14)
+      width: auto
+      +r($sm)
+        height: 14px
+        width: auto
+  .navigation-fraction__pagination
+    width: auto
+    display: block
+    position: static
+    margin: 0 aCalc(40)
+    +r($sm)
+      margin: 0 40px
+  .gallery-grid__navigation

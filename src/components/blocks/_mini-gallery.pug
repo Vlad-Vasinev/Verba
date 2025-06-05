@@ -1,0 +1,22 @@
+.mini-gallery-block(js-mini-gallery-slider data-gallery-srcset="img/reviews1.png, img/reviews1.png, img/galleryGrid1.png, img/galleryGrid1.png, img/galleryGrid1.png, img/galleryGrid1.png, img/galleryGrid1.png")
+  .mini-gallery-block__wrapper
+    .mini-gallery-block__item
+      img(src="img/galleryGrid1.png" alt="")
+    .mini-gallery-block__item
+      img(src="img/galleryGrid1.png" alt="")
+    .mini-gallery-block__item
+      img(src="img/galleryGrid1.png" alt="")
+      .mini-gallery-block__badge(js-modal-open data-modal-name='mini-gallery') 
+        h5 Watch all
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="12" fill="#fff" />
+          <path stroke="#000" stroke-linecap="round" d="M6 12h12m0 0-5 5m5-5-5-5" />
+        </svg>
+  .navigation-fraction
+    .navigation-fraction__prev
+      svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+        path(d='M1.5 8L8.5 14.9958M1.5 8L8.5 1.00391M1.5 8H30.5' stroke='black')
+    .navigation-fraction__pagination
+    .navigation-fraction__next
+      svg(width='31' height='16' viewBox='0 0 31 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+        path(d='M29.5 7.99976L22.5 1.00391M29.5 7.99976L22.5 14.9959M29.5 7.99976L0.499999 7.99976' stroke='black')

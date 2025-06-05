@@ -1,0 +1,22 @@
+.programs-grid-block_four-column
+  .programs-grid-block__desc
+    h1 + h4
+      margin-top: 16px
+  .programs-grid-block__grid
+    display: flex
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 
+    +aProp(gap, 20)
+    +r($sm)
+      margin-bottom: 10px
+      flex-direction: column
+      gap: 10px
+      grid-template-columns: 1fr
+      
+  button
+    width: max-content
+    +aProp(margin-top, 24)
+    +r($sm)
+      margin-top: 0
+      width: 100%
+// .programs-grid-block_no-desc

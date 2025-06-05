@@ -1,0 +1,11 @@
+import "./components/header"
+import "./components/index"
+import "./components/footer"
+import "./components/stories"
+import "./components/modals"
+import "./components/videoBanner"
+import "./components/fillButton"
+import "./components/autophrase"
+import "./components/services"
+import "./components/accordeon"
+
